@@ -1,0 +1,10 @@
+[package]
+name = "gdnative-coretypes"
+version = "0.1.0"
+authors = ["Tomek <romen3@gmail.com>"]
+
+[dependencies]
+kerrex-gdnative-sys = "0.1.3"
+
+[build-dependencies]
+bindgen = "0.22.1"

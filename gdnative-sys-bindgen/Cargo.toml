@@ -4,6 +4,10 @@ version = "0.1.0"
 authors = ["Max Sandholm <max@sandholm.org>"]
 build = "build.rs"
 
+[lib]
+name = "gdnative_sys"
+crate-type = ['dylib']
+
 [dependencies]
 
 [build-dependencies]

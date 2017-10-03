@@ -1,9 +1,13 @@
 [package]
-name = "gdnative-sys"
-version = "0.1.1"
-authors = ["Max Sandholm <max@sandholm.org>"]
+name = "kerrex-gdnative-sys"
+version = "0.1.3"
+authors = ["Kerrex <romen3@gmail.com>"]
 description = "Bindings to the GDNative C API"
-repository = "https://gitlab.com/vurpo/gdnative-rust"
+repository = "https://github.com/Kerrex/godot-rust"
 license = "MIT"
+
+[lib]
+name = "gdnative_sys"
+crate-type = ["dylib"]
 
 [dependencies]

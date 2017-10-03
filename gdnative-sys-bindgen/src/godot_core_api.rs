@@ -46,19 +46,34 @@ pub const _ATFILE_SOURCE: ::std::os::raw::c_uint = 1;
 pub const __USE_MISC: ::std::os::raw::c_uint = 1;
 pub const __USE_ATFILE: ::std::os::raw::c_uint = 1;
 pub const __USE_FORTIFY_LEVEL: ::std::os::raw::c_uint = 0;
+pub const __GLIBC_USE_DEPRECATED_GETS: ::std::os::raw::c_uint = 0;
 pub const _STDC_PREDEF_H: ::std::os::raw::c_uint = 1;
 pub const __STDC_IEC_559__: ::std::os::raw::c_uint = 1;
 pub const __STDC_IEC_559_COMPLEX__: ::std::os::raw::c_uint = 1;
-pub const __STDC_ISO_10646__: ::std::os::raw::c_uint = 201605;
+pub const __STDC_ISO_10646__: ::std::os::raw::c_uint = 201706;
 pub const __STDC_NO_THREADS__: ::std::os::raw::c_uint = 1;
 pub const __GNU_LIBRARY__: ::std::os::raw::c_uint = 6;
 pub const __GLIBC__: ::std::os::raw::c_uint = 2;
-pub const __GLIBC_MINOR__: ::std::os::raw::c_uint = 24;
+pub const __GLIBC_MINOR__: ::std::os::raw::c_uint = 26;
 pub const _SYS_CDEFS_H: ::std::os::raw::c_uint = 1;
+pub const __glibc_c99_flexarr_available: ::std::os::raw::c_uint = 1;
 pub const __WORDSIZE: ::std::os::raw::c_uint = 64;
 pub const __WORDSIZE_TIME64_COMPAT32: ::std::os::raw::c_uint = 1;
 pub const __SYSCALL_WORDSIZE: ::std::os::raw::c_uint = 64;
+pub const __HAVE_GENERIC_SELECTION: ::std::os::raw::c_uint = 1;
+pub const __GLIBC_USE_LIB_EXT2: ::std::os::raw::c_uint = 0;
+pub const __GLIBC_USE_IEC_60559_BFP_EXT: ::std::os::raw::c_uint = 0;
+pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: ::std::os::raw::c_uint = 0;
+pub const __GLIBC_USE_IEC_60559_TYPES_EXT: ::std::os::raw::c_uint = 0;
+pub const _BITS_TYPES_H: ::std::os::raw::c_uint = 1;
+pub const _BITS_TYPESIZES_H: ::std::os::raw::c_uint = 1;
+pub const __OFF_T_MATCHES_OFF64_T: ::std::os::raw::c_uint = 1;
+pub const __INO_T_MATCHES_INO64_T: ::std::os::raw::c_uint = 1;
+pub const __RLIM_T_MATCHES_RLIM64_T: ::std::os::raw::c_uint = 1;
+pub const __FD_SETSIZE: ::std::os::raw::c_uint = 1024;
 pub const _BITS_WCHAR_H: ::std::os::raw::c_uint = 1;
+pub const _BITS_STDINT_INTN_H: ::std::os::raw::c_uint = 1;
+pub const _BITS_STDINT_UINTN_H: ::std::os::raw::c_uint = 1;
 pub const INT8_MIN: ::std::os::raw::c_int = -128;
 pub const INT16_MIN: ::std::os::raw::c_int = -32768;
 pub const INT32_MIN: ::std::os::raw::c_int = -2147483648;
@@ -100,13 +115,114 @@ pub const GODOT_API_VERSION: ::std::os::raw::c_uint = 1;
 pub const GODOT_TRUE: ::std::os::raw::c_uint = 1;
 pub const GODOT_FALSE: ::std::os::raw::c_uint = 0;
 pub const _WCHAR_H: ::std::os::raw::c_uint = 1;
-pub const __FILE_defined: ::std::os::raw::c_uint = 1;
-pub const ____FILE_defined: ::std::os::raw::c_uint = 1;
+pub const __HAVE_FLOAT128: ::std::os::raw::c_uint = 0;
+pub const __HAVE_DISTINCT_FLOAT128: ::std::os::raw::c_uint = 0;
 pub const __GNUC_VA_LIST: ::std::os::raw::c_uint = 1;
-pub const ____mbstate_t_defined: ::std::os::raw::c_uint = 1;
+pub const __wint_t_defined: ::std::os::raw::c_uint = 1;
+pub const _WINT_T: ::std::os::raw::c_uint = 1;
 pub const __mbstate_t_defined: ::std::os::raw::c_uint = 1;
+pub const ____mbstate_t_defined: ::std::os::raw::c_uint = 1;
+pub const ____FILE_defined: ::std::os::raw::c_uint = 1;
+pub const __FILE_defined: ::std::os::raw::c_uint = 1;
+pub const _BITS_TYPES_LOCALE_T_H: ::std::os::raw::c_uint = 1;
+pub const _BITS_TYPES___LOCALE_T_H: ::std::os::raw::c_uint = 1;
 pub const WEOF: ::std::os::raw::c_uint = 4294967295;
-pub const _XLOCALE_H: ::std::os::raw::c_uint = 1;
+pub const GODOT_STRING_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_VECTOR2_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_VECTOR3_SIZE: ::std::os::raw::c_uint = 12;
+pub const GODOT_BASIS_SIZE: ::std::os::raw::c_uint = 36;
+pub const GODOT_QUAT_SIZE: ::std::os::raw::c_uint = 16;
+pub const GODOT_TRANSFORM2D_SIZE: ::std::os::raw::c_uint = 24;
+pub const GODOT_VARIANT_SIZE: ::std::os::raw::c_uint = 24;
+pub const GODOT_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_BYTE_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_INT_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_REAL_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_STRING_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_VECTOR2_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_VECTOR3_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_POOL_COLOR_ARRAY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_COLOR_SIZE: ::std::os::raw::c_uint = 16;
+pub const GODOT_DICTIONARY_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_NODE_PATH_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_PLANE_SIZE: ::std::os::raw::c_uint = 16;
+pub const GODOT_RECT3_SIZE: ::std::os::raw::c_uint = 24;
+pub const GODOT_RID_SIZE: ::std::os::raw::c_uint = 8;
+pub const GODOT_TRANSFORM_SIZE: ::std::os::raw::c_uint = 48;
+pub type __u_char = ::std::os::raw::c_uchar;
+pub type __u_short = ::std::os::raw::c_ushort;
+pub type __u_int = ::std::os::raw::c_uint;
+pub type __u_long = ::std::os::raw::c_ulong;
+pub type __int8_t = ::std::os::raw::c_char;
+pub type __uint8_t = ::std::os::raw::c_uchar;
+pub type __int16_t = ::std::os::raw::c_short;
+pub type __uint16_t = ::std::os::raw::c_ushort;
+pub type __int32_t = ::std::os::raw::c_int;
+pub type __uint32_t = ::std::os::raw::c_uint;
+pub type __int64_t = ::std::os::raw::c_long;
+pub type __uint64_t = ::std::os::raw::c_ulong;
+pub type __quad_t = ::std::os::raw::c_long;
+pub type __u_quad_t = ::std::os::raw::c_ulong;
+pub type __intmax_t = ::std::os::raw::c_long;
+pub type __uintmax_t = ::std::os::raw::c_ulong;
+pub type __dev_t = ::std::os::raw::c_ulong;
+pub type __uid_t = ::std::os::raw::c_uint;
+pub type __gid_t = ::std::os::raw::c_uint;
+pub type __ino_t = ::std::os::raw::c_ulong;
+pub type __ino64_t = ::std::os::raw::c_ulong;
+pub type __mode_t = ::std::os::raw::c_uint;
+pub type __nlink_t = ::std::os::raw::c_ulong;
+pub type __off_t = ::std::os::raw::c_long;
+pub type __off64_t = ::std::os::raw::c_long;
+pub type __pid_t = ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct __fsid_t {
+    pub __val: [::std::os::raw::c_int; 2usize],
+}
+#[test]
+fn bindgen_test_layout___fsid_t() {
+    assert_eq!(::std::mem::size_of::<__fsid_t>() , 8usize , concat ! (
+               "Size of: " , stringify ! ( __fsid_t ) ));
+    assert_eq! (::std::mem::align_of::<__fsid_t>() , 4usize , concat ! (
+                "Alignment of " , stringify ! ( __fsid_t ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const __fsid_t ) ) . __val as * const _ as
+                usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( __fsid_t ) , "::" ,
+                stringify ! ( __val ) ));
+}
+impl Clone for __fsid_t {
+    fn clone(&self) -> Self { *self }
+}
+pub type __clock_t = ::std::os::raw::c_long;
+pub type __rlim_t = ::std::os::raw::c_ulong;
+pub type __rlim64_t = ::std::os::raw::c_ulong;
+pub type __id_t = ::std::os::raw::c_uint;
+pub type __time_t = ::std::os::raw::c_long;
+pub type __useconds_t = ::std::os::raw::c_uint;
+pub type __suseconds_t = ::std::os::raw::c_long;
+pub type __daddr_t = ::std::os::raw::c_int;
+pub type __key_t = ::std::os::raw::c_int;
+pub type __clockid_t = ::std::os::raw::c_int;
+pub type __timer_t = *mut ::std::os::raw::c_void;
+pub type __blksize_t = ::std::os::raw::c_long;
+pub type __blkcnt_t = ::std::os::raw::c_long;
+pub type __blkcnt64_t = ::std::os::raw::c_long;
+pub type __fsblkcnt_t = ::std::os::raw::c_ulong;
+pub type __fsblkcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt_t = ::std::os::raw::c_ulong;
+pub type __fsfilcnt64_t = ::std::os::raw::c_ulong;
+pub type __fsword_t = ::std::os::raw::c_long;
+pub type __ssize_t = ::std::os::raw::c_long;
+pub type __syscall_slong_t = ::std::os::raw::c_long;
+pub type __syscall_ulong_t = ::std::os::raw::c_ulong;
+pub type __loff_t = __off64_t;
+pub type __qaddr_t = *mut __quad_t;
+pub type __caddr_t = *mut ::std::os::raw::c_char;
+pub type __intptr_t = ::std::os::raw::c_long;
+pub type __socklen_t = ::std::os::raw::c_uint;
+pub type __sig_atomic_t = ::std::os::raw::c_int;
 pub type int_least8_t = ::std::os::raw::c_char;
 pub type int_least16_t = ::std::os::raw::c_short;
 pub type int_least32_t = ::std::os::raw::c_int;
@@ -123,8 +239,8 @@ pub type uint_fast8_t = ::std::os::raw::c_uchar;
 pub type uint_fast16_t = ::std::os::raw::c_ulong;
 pub type uint_fast32_t = ::std::os::raw::c_ulong;
 pub type uint_fast64_t = ::std::os::raw::c_ulong;
-pub type intmax_t = ::std::os::raw::c_long;
-pub type uintmax_t = ::std::os::raw::c_ulong;
+pub type intmax_t = __intmax_t;
+pub type uintmax_t = __uintmax_t;
 pub const godot_error_GODOT_ERR_WTF: godot_error =
     godot_error::GODOT_ERR_OMFG_THIS_IS_VERY_VERY_BAD;
 #[repr(u32)]
@@ -190,14 +306,9 @@ pub type godot_int = ::std::os::raw::c_int;
 pub type godot_real = f32;
 /////// Object (forward declared)
 pub type godot_object = ::std::os::raw::c_void;
-#[repr(C)]
-#[derive(Debug, Copy, Clone)]
-pub struct _IO_FILE([u8; 0]);
-pub type FILE = _IO_FILE;
-pub type __FILE = _IO_FILE;
+pub type wchar_t = ::std::os::raw::c_int;
 pub type va_list = __builtin_va_list;
 pub type __gnuc_va_list = __builtin_va_list;
-pub type wchar_t = ::std::os::raw::c_int;
 pub type wint_t = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -259,39 +370,9 @@ impl Clone for __mbstate_t {
 pub type mbstate_t = __mbstate_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct tm([u8; 0]);
-extern "C" {
-    pub fn wcscpy(__dest: *mut wchar_t, __src: *const wchar_t)
-     -> *mut wchar_t;
-}
-extern "C" {
-    pub fn wcsncpy(__dest: *mut wchar_t, __src: *const wchar_t, __n: usize)
-     -> *mut wchar_t;
-}
-extern "C" {
-    pub fn wcscat(__dest: *mut wchar_t, __src: *const wchar_t)
-     -> *mut wchar_t;
-}
-extern "C" {
-    pub fn wcsncat(__dest: *mut wchar_t, __src: *const wchar_t, __n: usize)
-     -> *mut wchar_t;
-}
-extern "C" {
-    pub fn wcscmp(__s1: *const wchar_t, __s2: *const wchar_t)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn wcsncmp(__s1: *const wchar_t, __s2: *const wchar_t, __n: usize)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn wcscasecmp(__s1: *const wchar_t, __s2: *const wchar_t)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn wcsncasecmp(__s1: *const wchar_t, __s2: *const wchar_t, __n: usize)
-     -> ::std::os::raw::c_int;
-}
+pub struct _IO_FILE([u8; 0]);
+pub type __FILE = _IO_FILE;
+pub type FILE = _IO_FILE;
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct __locale_struct {
@@ -338,13 +419,48 @@ impl Clone for __locale_struct {
 }
 pub type __locale_t = *mut __locale_struct;
 pub type locale_t = __locale_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct tm([u8; 0]);
+extern "C" {
+    pub fn wcscpy(__dest: *mut wchar_t, __src: *const wchar_t)
+     -> *mut wchar_t;
+}
+extern "C" {
+    pub fn wcsncpy(__dest: *mut wchar_t, __src: *const wchar_t, __n: usize)
+     -> *mut wchar_t;
+}
+extern "C" {
+    pub fn wcscat(__dest: *mut wchar_t, __src: *const wchar_t)
+     -> *mut wchar_t;
+}
+extern "C" {
+    pub fn wcsncat(__dest: *mut wchar_t, __src: *const wchar_t, __n: usize)
+     -> *mut wchar_t;
+}
+extern "C" {
+    pub fn wcscmp(__s1: *const wchar_t, __s2: *const wchar_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn wcsncmp(__s1: *const wchar_t, __s2: *const wchar_t, __n: usize)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn wcscasecmp(__s1: *const wchar_t, __s2: *const wchar_t)
+     -> ::std::os::raw::c_int;
+}
+extern "C" {
+    pub fn wcsncasecmp(__s1: *const wchar_t, __s2: *const wchar_t, __n: usize)
+     -> ::std::os::raw::c_int;
+}
 extern "C" {
     pub fn wcscasecmp_l(__s1: *const wchar_t, __s2: *const wchar_t,
-                        __loc: __locale_t) -> ::std::os::raw::c_int;
+                        __loc: locale_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn wcsncasecmp_l(__s1: *const wchar_t, __s2: *const wchar_t,
-                         __n: usize, __loc: __locale_t)
+                         __n: usize, __loc: locale_t)
      -> ::std::os::raw::c_int;
 }
 extern "C" {
@@ -357,17 +473,18 @@ extern "C" {
 }
 extern "C" {
     pub fn wcscoll_l(__s1: *const wchar_t, __s2: *const wchar_t,
-                     __loc: __locale_t) -> ::std::os::raw::c_int;
+                     __loc: locale_t) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn wcsxfrm_l(__s1: *mut wchar_t, __s2: *const wchar_t, __n: usize,
-                     __loc: __locale_t) -> usize;
+                     __loc: locale_t) -> usize;
 }
 extern "C" {
     pub fn wcsdup(__s: *const wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcschr(__wcs: *const wchar_t, __wc: wchar_t) -> *mut wchar_t;
+    pub fn wcschr(__wcs: *const wchar_t, __wc: wchar_t)
+     -> *mut ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn wcsrchr(__wcs: *const wchar_t, __wc: wchar_t) -> *mut wchar_t;
@@ -391,14 +508,14 @@ extern "C" {
                   __ptr: *mut *mut wchar_t) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn wcslen(__s: *const wchar_t) -> usize;
+    pub fn wcslen(__s: *const wchar_t) -> ::std::os::raw::c_ulong;
 }
 extern "C" {
     pub fn wcsnlen(__s: *const wchar_t, __maxlen: usize) -> usize;
 }
 extern "C" {
     pub fn wmemchr(__s: *const wchar_t, __c: wchar_t, __n: usize)
-     -> *mut wchar_t;
+     -> *mut ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn wmemcmp(__s1: *const wchar_t, __s2: *const wchar_t, __n: usize)
@@ -634,45 +751,55 @@ impl Clone for godot_string {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_string_new(p_str: *mut godot_string);
+    pub fn godot_string_new(r_dest: *mut godot_string);
 }
 extern "C" {
-    pub fn godot_string_new_data(p_str: *mut godot_string,
+    pub fn godot_string_new_copy(r_dest: *mut godot_string,
+                                 p_src: *const godot_string);
+}
+extern "C" {
+    pub fn godot_string_new_data(r_dest: *mut godot_string,
                                  p_contents: *const ::std::os::raw::c_char,
                                  p_size: ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn godot_string_get_data(p_str: *const godot_string,
-                                 p_dest: *mut wchar_t,
+    pub fn godot_string_new_unicode_data(r_dest: *mut godot_string,
+                                         p_contents: *const wchar_t,
+                                         p_size: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn godot_string_get_data(p_self: *const godot_string,
+                                 p_dest: *mut ::std::os::raw::c_char,
                                  p_size: *mut ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn godot_string_copy_string(p_dest: *const godot_string,
-                                    p_src: *const godot_string);
-}
-extern "C" {
-    pub fn godot_string_operator_index(p_str: *mut godot_string,
+    pub fn godot_string_operator_index(p_self: *mut godot_string,
                                        p_idx: godot_int) -> *mut wchar_t;
 }
 extern "C" {
-    pub fn godot_string_c_str(p_str: *const godot_string) -> *const wchar_t;
+    pub fn godot_string_c_str(p_self: *const godot_string)
+     -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn godot_string_operator_equal(p_a: *const godot_string,
+    pub fn godot_string_unicode_str(p_self: *const godot_string)
+     -> *const wchar_t;
+}
+extern "C" {
+    pub fn godot_string_operator_equal(p_self: *const godot_string,
                                        p_b: *const godot_string)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_string_operator_less(p_a: *const godot_string,
+    pub fn godot_string_operator_less(p_self: *const godot_string,
                                       p_b: *const godot_string) -> godot_bool;
 }
 extern "C" {
-    pub fn godot_string_operator_plus(p_dest: *mut godot_string,
-                                      p_a: *const godot_string,
-                                      p_b: *const godot_string);
+    pub fn godot_string_operator_plus(p_self: *const godot_string,
+                                      p_b: *const godot_string)
+     -> godot_string;
 }
 extern "C" {
-    pub fn godot_string_destroy(p_str: *mut godot_string);
+    pub fn godot_string_destroy(p_self: *mut godot_string);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -695,83 +822,160 @@ impl Clone for godot_vector2 {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_vector2_new(p_v: *mut godot_vector2, p_x: godot_real,
+    pub fn godot_vector2_new(r_dest: *mut godot_vector2, p_x: godot_real,
                              p_y: godot_real);
 }
 extern "C" {
-    pub fn godot_vector2_set_x(p_v: *mut godot_vector2, p_x: godot_real);
+    pub fn godot_vector2_as_string(p_self: *const godot_vector2)
+     -> godot_string;
 }
 extern "C" {
-    pub fn godot_vector2_set_y(p_v: *mut godot_vector2, p_y: godot_real);
+    pub fn godot_vector2_normalized(p_self: *const godot_vector2)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_vector2_get_x(p_v: *const godot_vector2) -> godot_real;
+    pub fn godot_vector2_length(p_self: *const godot_vector2) -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_get_y(p_v: *const godot_vector2) -> godot_real;
+    pub fn godot_vector2_angle(p_self: *const godot_vector2) -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_normalize(p_v: *mut godot_vector2);
-}
-extern "C" {
-    pub fn godot_vector2_normalized(p_dest: *mut godot_vector2,
-                                    p_src: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_vector2_length(p_v: *const godot_vector2) -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector2_length_squared(p_v: *const godot_vector2)
+    pub fn godot_vector2_length_squared(p_self: *const godot_vector2)
      -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_distance_to(p_a: *const godot_vector2,
-                                     p_b: *const godot_vector2) -> godot_real;
+    pub fn godot_vector2_is_normalized(p_self: *const godot_vector2)
+     -> godot_bool;
 }
 extern "C" {
-    pub fn godot_vector2_distance_squared_to(p_a: *const godot_vector2,
-                                             p_b: *const godot_vector2)
+    pub fn godot_vector2_distance_to(p_self: *const godot_vector2,
+                                     p_to: *const godot_vector2)
      -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_operator_add(p_dest: *mut godot_vector2,
-                                      p_a: *const godot_vector2,
-                                      p_b: *const godot_vector2);
+    pub fn godot_vector2_distance_squared_to(p_self: *const godot_vector2,
+                                             p_to: *const godot_vector2)
+     -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_operator_subtract(p_dest: *mut godot_vector2,
-                                           p_a: *const godot_vector2,
-                                           p_b: *const godot_vector2);
+    pub fn godot_vector2_angle_to(p_self: *const godot_vector2,
+                                  p_to: *const godot_vector2) -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_operator_multiply_vector(p_dest: *mut godot_vector2,
-                                                  p_a: *const godot_vector2,
-                                                  p_b: *const godot_vector2);
+    pub fn godot_vector2_angle_to_point(p_self: *const godot_vector2,
+                                        p_to: *const godot_vector2)
+     -> godot_real;
 }
 extern "C" {
-    pub fn godot_vector2_operator_multiply_scalar(p_dest: *mut godot_vector2,
-                                                  p_a: *const godot_vector2,
-                                                  p_b: godot_real);
+    pub fn godot_vector2_linear_interpolate(p_self: *const godot_vector2,
+                                            p_b: *const godot_vector2,
+                                            p_t: godot_real) -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_vector2_operator_divide_vector(p_dest: *mut godot_vector2,
-                                                p_a: *const godot_vector2,
-                                                p_b: *const godot_vector2);
+    pub fn godot_vector2_cubic_interpolate(p_self: *const godot_vector2,
+                                           p_b: *const godot_vector2,
+                                           p_pre_a: *const godot_vector2,
+                                           p_post_b: *const godot_vector2,
+                                           p_t: godot_real) -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_vector2_operator_divide_scalar(p_dest: *mut godot_vector2,
-                                                p_a: *const godot_vector2,
-                                                p_b: godot_real);
+    pub fn godot_vector2_rotated(p_self: *const godot_vector2,
+                                 p_phi: godot_real) -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_vector2_operator_equal(p_a: *const godot_vector2,
+    pub fn godot_vector2_tangent(p_self: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_floor(p_self: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_snapped(p_self: *const godot_vector2,
+                                 p_by: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_aspect(p_self: *const godot_vector2) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector2_dot(p_self: *const godot_vector2,
+                             p_with: *const godot_vector2) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector2_slide(p_self: *const godot_vector2,
+                               p_n: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_bounce(p_self: *const godot_vector2,
+                                p_n: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_reflect(p_self: *const godot_vector2,
+                                 p_n: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_abs(p_self: *const godot_vector2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_clamped(p_self: *const godot_vector2,
+                                 p_length: godot_real) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_add(p_self: *const godot_vector2,
+                                      p_b: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_substract(p_self: *const godot_vector2,
+                                            p_b: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_multiply_vector(p_self:
+                                                      *const godot_vector2,
+                                                  p_b: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_multiply_scalar(p_self:
+                                                      *const godot_vector2,
+                                                  p_b: godot_real)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_divide_vector(p_self: *const godot_vector2,
+                                                p_b: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_divide_scalar(p_self: *const godot_vector2,
+                                                p_b: godot_real)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_operator_equal(p_self: *const godot_vector2,
                                         p_b: *const godot_vector2)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_vector2_operator_less(p_a: *const godot_vector2,
+    pub fn godot_vector2_operator_less(p_self: *const godot_vector2,
                                        p_b: *const godot_vector2)
      -> godot_bool;
+}
+extern "C" {
+    pub fn godot_vector2_operator_neg(p_self: *const godot_vector2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_vector2_set_x(p_self: *mut godot_vector2, p_x: godot_real);
+}
+extern "C" {
+    pub fn godot_vector2_set_y(p_self: *mut godot_vector2, p_y: godot_real);
+}
+extern "C" {
+    pub fn godot_vector2_get_x(p_self: *const godot_vector2) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector2_get_y(p_self: *const godot_vector2) -> godot_real;
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -794,27 +998,70 @@ impl Clone for godot_rect2 {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_rect2_new(p_rect: *mut godot_rect2);
+    pub fn godot_rect2_new_with_position_and_size(r_dest: *mut godot_rect2,
+                                                  p_pos: *const godot_vector2,
+                                                  p_size:
+                                                      *const godot_vector2);
 }
 extern "C" {
-    pub fn godot_rect2_new_with_pos_and_size(p_rect: *mut godot_rect2,
-                                             p_pos: *const godot_vector2,
-                                             p_size: *const godot_vector2);
+    pub fn godot_rect2_new(r_dest: *mut godot_rect2, p_x: godot_real,
+                           p_y: godot_real, p_width: godot_real,
+                           p_height: godot_real);
 }
 extern "C" {
-    pub fn godot_rect2_get_pos(p_rect: *mut godot_rect2)
-     -> *mut godot_vector2;
+    pub fn godot_rect2_as_string(p_self: *const godot_rect2) -> godot_string;
 }
 extern "C" {
-    pub fn godot_rect2_set_pos(p_rect: *mut godot_rect2,
-                               p_pos: *const godot_vector2);
+    pub fn godot_rect2_get_area(p_self: *const godot_rect2) -> godot_real;
 }
 extern "C" {
-    pub fn godot_rect2_get_size(p_rect: *mut godot_rect2)
-     -> *mut godot_vector2;
+    pub fn godot_rect2_intersects(p_self: *const godot_rect2,
+                                  p_b: *const godot_rect2) -> godot_bool;
 }
 extern "C" {
-    pub fn godot_rect2_set_size(p_rect: *mut godot_rect2,
+    pub fn godot_rect2_encloses(p_self: *const godot_rect2,
+                                p_b: *const godot_rect2) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect2_has_no_area(p_self: *const godot_rect2) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect2_clip(p_self: *const godot_rect2,
+                            p_b: *const godot_rect2) -> godot_rect2;
+}
+extern "C" {
+    pub fn godot_rect2_merge(p_self: *const godot_rect2,
+                             p_b: *const godot_rect2) -> godot_rect2;
+}
+extern "C" {
+    pub fn godot_rect2_has_point(p_self: *const godot_rect2,
+                                 p_point: *const godot_vector2) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect2_grow(p_self: *const godot_rect2, p_by: godot_real)
+     -> godot_rect2;
+}
+extern "C" {
+    pub fn godot_rect2_expand(p_self: *const godot_rect2,
+                              p_to: *const godot_vector2) -> godot_rect2;
+}
+extern "C" {
+    pub fn godot_rect2_operator_equal(p_self: *const godot_rect2,
+                                      p_b: *const godot_rect2) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect2_get_position(p_self: *const godot_rect2)
+     -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_rect2_get_size(p_self: *const godot_rect2) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_rect2_set_position(p_self: *mut godot_rect2,
+                                    p_pos: *const godot_vector2);
+}
+extern "C" {
+    pub fn godot_rect2_set_size(p_self: *mut godot_rect2,
                                 p_size: *const godot_vector2);
 }
 #[repr(C)]
@@ -837,179 +1084,21 @@ fn bindgen_test_layout_godot_vector3() {
 impl Clone for godot_vector3 {
     fn clone(&self) -> Self { *self }
 }
-extern "C" {
-    pub fn godot_vector3_new(p_v: *mut godot_vector3, p_x: godot_real,
-                             p_y: godot_real, p_z: godot_real);
-}
-extern "C" {
-    pub fn godot_vector3_set_axis(p_v: *mut godot_vector3, p_axis: godot_int,
-                                  p_val: godot_real);
-}
-extern "C" {
-    pub fn godot_vector3_get_axis(p_v: *const godot_vector3,
-                                  p_axis: godot_int) -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector3_min_axis(p_v: *const godot_vector3) -> godot_int;
-}
-extern "C" {
-    pub fn godot_vector3_max_axis(p_v: *const godot_vector3) -> godot_int;
-}
-extern "C" {
-    pub fn godot_vector3_length(p_v: *const godot_vector3) -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector3_length_squared(p_v: *const godot_vector3)
-     -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector3_normalize(p_v: *mut godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_normalized(p_dest: *mut godot_vector3,
-                                    p_src: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_distance_to(p_a: *const godot_vector3,
-                                     p_b: *const godot_vector3) -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector3_distance_squared_to(p_a: *const godot_vector3,
-                                             p_b: *const godot_vector3)
-     -> godot_real;
-}
-extern "C" {
-    pub fn godot_vector3_operator_add(p_dest: *mut godot_vector3,
-                                      p_a: *const godot_vector3,
-                                      p_b: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_operator_subtract(p_dest: *mut godot_vector3,
-                                           p_a: *const godot_vector3,
-                                           p_b: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_operator_multiply_vector(p_dest: *mut godot_vector3,
-                                                  p_a: *const godot_vector3,
-                                                  p_b: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_operator_multiply_scalar(p_dest: *mut godot_vector3,
-                                                  p_a: *const godot_vector3,
-                                                  p_b: godot_real);
-}
-extern "C" {
-    pub fn godot_vector3_operator_divide_vector(p_dest: *mut godot_vector3,
-                                                p_a: *const godot_vector3,
-                                                p_b: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_vector3_operator_divide_scalar(p_dest: *mut godot_vector3,
-                                                p_a: *const godot_vector3,
-                                                p_b: godot_real);
-}
-extern "C" {
-    pub fn godot_vector3_operator_equal(p_a: *const godot_vector3,
-                                        p_b: *const godot_vector3)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_vector3_operator_less(p_a: *const godot_vector3,
-                                       p_b: *const godot_vector3)
-     -> godot_bool;
-}
 #[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_transform2d {
-    pub _dont_touch_that: [u8; 24usize],
+pub struct godot_basis {
+    pub _dont_touch_that: [u8; 36usize],
 }
 #[test]
-fn bindgen_test_layout_godot_transform2d() {
-    assert_eq!(::std::mem::size_of::<godot_transform2d>() , 24usize , concat !
-               ( "Size of: " , stringify ! ( godot_transform2d ) ));
-    assert_eq! (::std::mem::align_of::<godot_transform2d>() , 1usize , concat
-                ! ( "Alignment of " , stringify ! ( godot_transform2d ) ));
+fn bindgen_test_layout_godot_basis() {
+    assert_eq!(::std::mem::size_of::<godot_basis>() , 36usize , concat ! (
+               "Size of: " , stringify ! ( godot_basis ) ));
+    assert_eq! (::std::mem::align_of::<godot_basis>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_basis ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_transform2d ) ) . _dont_touch_that
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_transform2d ) ,
-                "::" , stringify ! ( _dont_touch_that ) ));
-}
-impl Clone for godot_transform2d {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    pub fn godot_transform2d_new_identity(p_t: *mut godot_transform2d);
-}
-extern "C" {
-    pub fn godot_transform2d_new_elements(p_t: *mut godot_transform2d,
-                                          p_a: *const godot_vector2,
-                                          p_b: *const godot_vector2,
-                                          p_c: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_transform2d_new(p_t: *mut godot_transform2d,
-                                 p_rot: godot_real,
-                                 p_pos: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_transform2d_const_index(p_t: *const godot_transform2d,
-                                         p_idx: godot_int)
-     -> *const godot_vector2;
-}
-extern "C" {
-    pub fn godot_transform2d_index(p_t: *mut godot_transform2d,
-                                   p_idx: godot_int) -> *mut godot_vector2;
-}
-extern "C" {
-    pub fn godot_transform2d_get_axis(p_t: *const godot_transform2d,
-                                      p_axis: godot_int) -> godot_vector2;
-}
-extern "C" {
-    pub fn godot_transform2d_set_axis(p_t: *mut godot_transform2d,
-                                      p_axis: godot_int,
-                                      p_vec: *const godot_vector2);
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_plane {
-    pub _dont_touch_that: [u8; 16usize],
-}
-#[test]
-fn bindgen_test_layout_godot_plane() {
-    assert_eq!(::std::mem::size_of::<godot_plane>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( godot_plane ) ));
-    assert_eq! (::std::mem::align_of::<godot_plane>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_plane ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_plane ) ) . _dont_touch_that as *
+                & ( * ( 0 as * const godot_basis ) ) . _dont_touch_that as *
                 const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_plane ) , "::" ,
+                "Alignment of field: " , stringify ! ( godot_basis ) , "::" ,
                 stringify ! ( _dont_touch_that ) ));
-}
-impl Clone for godot_plane {
-    fn clone(&self) -> Self { *self }
-}
-extern "C" {
-    pub fn godot_plane_new(p_pl: *mut godot_plane);
-}
-extern "C" {
-    pub fn godot_plane_new_with_normal(p_pl: *mut godot_plane,
-                                       p_normal: *const godot_vector3,
-                                       p_d: godot_real);
-}
-extern "C" {
-    pub fn godot_plane_set_normal(p_pl: *mut godot_plane,
-                                  p_normal: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_plane_get_normal(p_pl: *const godot_plane) -> godot_vector3;
-}
-extern "C" {
-    pub fn godot_plane_get_d(p_pl: *const godot_plane) -> godot_real;
-}
-extern "C" {
-    pub fn godot_plane_set_d(p_pl: *mut godot_plane, p_d: godot_real);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -1032,210 +1121,538 @@ impl Clone for godot_quat {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_quat_new(p_quat: *mut godot_quat);
+    pub fn godot_quat_new(r_dest: *mut godot_quat, p_x: godot_real,
+                          p_y: godot_real, p_z: godot_real, p_w: godot_real);
 }
 extern "C" {
-    pub fn godot_quat_new_with_elements(p_quat: *mut godot_quat,
-                                        x: godot_real, y: godot_real,
-                                        z: godot_real, w: godot_real);
+    pub fn godot_quat_new_with_axis_angle(r_dest: *mut godot_quat,
+                                          p_axis: *const godot_vector3,
+                                          p_angle: godot_real);
 }
 extern "C" {
-    pub fn godot_quat_new_with_rotation(p_quat: *mut godot_quat,
-                                        p_axis: *const godot_vector3,
-                                        p_angle: godot_real);
+    pub fn godot_quat_get_x(p_self: *const godot_quat) -> godot_real;
 }
 extern "C" {
-    pub fn godot_quat_new_with_shortest_arc(p_quat: *mut godot_quat,
-                                            p_v0: *const godot_vector3,
-                                            p_v1: *const godot_vector3);
+    pub fn godot_quat_set_x(p_self: *mut godot_quat, val: godot_real);
 }
 extern "C" {
-    pub fn godot_quat_get_euler(p_quat: *const godot_quat) -> godot_vector3;
+    pub fn godot_quat_get_y(p_self: *const godot_quat) -> godot_real;
 }
 extern "C" {
-    pub fn godot_quat_set_euler(p_quat: *mut godot_quat,
-                                p_euler: *const godot_vector3);
+    pub fn godot_quat_set_y(p_self: *mut godot_quat, val: godot_real);
 }
 extern "C" {
-    pub fn godot_quat_index(p_quat: *mut godot_quat, p_idx: godot_int)
-     -> *mut godot_real;
+    pub fn godot_quat_get_z(p_self: *const godot_quat) -> godot_real;
 }
 extern "C" {
-    pub fn godot_quat_const_index(p_quat: *const godot_quat, p_idx: godot_int)
+    pub fn godot_quat_set_z(p_self: *mut godot_quat, val: godot_real);
+}
+extern "C" {
+    pub fn godot_quat_get_w(p_self: *const godot_quat) -> godot_real;
+}
+extern "C" {
+    pub fn godot_quat_set_w(p_self: *mut godot_quat, val: godot_real);
+}
+extern "C" {
+    pub fn godot_quat_as_string(p_self: *const godot_quat) -> godot_string;
+}
+extern "C" {
+    pub fn godot_quat_length(p_self: *const godot_quat) -> godot_real;
+}
+extern "C" {
+    pub fn godot_quat_length_squared(p_self: *const godot_quat) -> godot_real;
+}
+extern "C" {
+    pub fn godot_quat_normalized(p_self: *const godot_quat) -> godot_quat;
+}
+extern "C" {
+    pub fn godot_quat_is_normalized(p_self: *const godot_quat) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_quat_inverse(p_self: *const godot_quat) -> godot_quat;
+}
+extern "C" {
+    pub fn godot_quat_dot(p_self: *const godot_quat, p_b: *const godot_quat)
      -> godot_real;
 }
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_rect3 {
-    pub _dont_touch_that: [u8; 24usize],
-}
-#[test]
-fn bindgen_test_layout_godot_rect3() {
-    assert_eq!(::std::mem::size_of::<godot_rect3>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( godot_rect3 ) ));
-    assert_eq! (::std::mem::align_of::<godot_rect3>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_rect3 ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_rect3 ) ) . _dont_touch_that as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_rect3 ) , "::" ,
-                stringify ! ( _dont_touch_that ) ));
-}
-impl Clone for godot_rect3 {
-    fn clone(&self) -> Self { *self }
+extern "C" {
+    pub fn godot_quat_xform(p_self: *const godot_quat,
+                            p_v: *const godot_vector3) -> godot_vector3;
 }
 extern "C" {
-    pub fn godot_rect3_new(p_rect: *mut godot_rect3);
+    pub fn godot_quat_slerp(p_self: *const godot_quat, p_b: *const godot_quat,
+                            p_t: godot_real) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_rect3_new_with_pos_and_size(p_rect: *mut godot_rect3,
-                                             p_pos: *const godot_vector3,
-                                             p_size: *const godot_vector3);
+    pub fn godot_quat_slerpni(p_self: *const godot_quat,
+                              p_b: *const godot_quat, p_t: godot_real)
+     -> godot_quat;
 }
 extern "C" {
-    pub fn godot_rect3_get_pos(p_rect: *mut godot_rect3)
-     -> *mut godot_vector3;
+    pub fn godot_quat_cubic_slerp(p_self: *const godot_quat,
+                                  p_b: *const godot_quat,
+                                  p_pre_a: *const godot_quat,
+                                  p_post_b: *const godot_quat,
+                                  p_t: godot_real) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_rect3_set_pos(p_rect: *mut godot_rect3,
-                               p_pos: *const godot_vector3);
+    pub fn godot_quat_operator_multiply(p_self: *const godot_quat,
+                                        p_b: godot_real) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_rect3_get_size(p_rect: *mut godot_rect3)
-     -> *mut godot_vector3;
+    pub fn godot_quat_operator_add(p_self: *const godot_quat,
+                                   p_b: *const godot_quat) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_rect3_set_size(p_rect: *mut godot_rect3,
-                                p_size: *const godot_vector3);
-}
-#[repr(C)]
-pub struct godot_basis {
-    pub _dont_touch_that: [u8; 36usize],
-}
-#[test]
-fn bindgen_test_layout_godot_basis() {
-    assert_eq!(::std::mem::size_of::<godot_basis>() , 36usize , concat ! (
-               "Size of: " , stringify ! ( godot_basis ) ));
-    assert_eq! (::std::mem::align_of::<godot_basis>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_basis ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_basis ) ) . _dont_touch_that as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_basis ) , "::" ,
-                stringify ! ( _dont_touch_that ) ));
+    pub fn godot_quat_operator_substract(p_self: *const godot_quat,
+                                         p_b: *const godot_quat)
+     -> godot_quat;
 }
 extern "C" {
-    pub fn godot_basis_new(p_basis: *mut godot_basis);
+    pub fn godot_quat_operator_divide(p_self: *const godot_quat,
+                                      p_b: godot_real) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_basis_new_with_euler_quat(p_basis: *mut godot_basis,
-                                           p_euler: *const godot_quat);
+    pub fn godot_quat_operator_equal(p_self: *const godot_quat,
+                                     p_b: *const godot_quat) -> godot_bool;
 }
 extern "C" {
-    pub fn godot_basis_new_with_euler(p_basis: *mut godot_basis,
+    pub fn godot_quat_operator_neg(p_self: *const godot_quat) -> godot_quat;
+}
+extern "C" {
+    pub fn godot_basis_new_with_rows(r_dest: *mut godot_basis,
+                                     p_x_axis: *const godot_vector3,
+                                     p_y_axis: *const godot_vector3,
+                                     p_z_axis: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_new_with_axis_and_angle(r_dest: *mut godot_basis,
+                                               p_axis: *const godot_vector3,
+                                               p_phi: godot_real);
+}
+extern "C" {
+    pub fn godot_basis_new_with_euler(r_dest: *mut godot_basis,
                                       p_euler: *const godot_vector3);
 }
 extern "C" {
-    pub fn godot_basis_as_quat(p_basis: *const godot_basis) -> godot_quat;
+    pub fn godot_basis_as_string(p_self: *const godot_basis) -> godot_string;
 }
 extern "C" {
-    pub fn godot_basis_get_euler(p_basis: *const godot_basis)
+    pub fn godot_basis_inverse(p_self: *const godot_basis) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_transposed(p_self: *const godot_basis) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_orthonormalized(p_self: *const godot_basis)
+     -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_determinant(p_self: *const godot_basis) -> godot_real;
+}
+extern "C" {
+    pub fn godot_basis_rotated(p_self: *const godot_basis,
+                               p_axis: *const godot_vector3,
+                               p_phi: godot_real) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_scaled(p_self: *const godot_basis,
+                              p_scale: *const godot_vector3) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_set_scale(p_self: *mut godot_basis,
+                                 p_scale: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_set_rotation_euler(p_self: *mut godot_basis,
+                                          p_euler: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_set_rotation_axis_angle(p_self: *mut godot_basis,
+                                               p_axis: *const godot_vector3,
+                                               p_angle: godot_real);
+}
+extern "C" {
+    pub fn godot_basis_get_scale(p_self: *const godot_basis) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_basis_get_euler(p_self: *const godot_basis) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_basis_tdotx(p_self: *const godot_basis,
+                             p_with: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_basis_tdoty(p_self: *const godot_basis,
+                             p_with: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_basis_tdotz(p_self: *const godot_basis,
+                             p_with: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_basis_xform(p_self: *const godot_basis,
+                             p_v: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_basis_xform_inv(p_self: *const godot_basis,
+                                 p_v: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_basis_get_orthogonal_index(p_self: *const godot_basis)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_basis_new(r_dest: *mut godot_basis);
+}
+extern "C" {
+    pub fn godot_basis_new_with_euler_quat(r_dest: *mut godot_basis,
+                                           p_euler: *const godot_quat);
+}
+extern "C" {
+    pub fn godot_basis_get_elements(p_self: *mut godot_basis,
+                                    p_elements: *mut godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_get_axis(p_self: *const godot_basis, p_axis: godot_int)
      -> godot_vector3;
 }
 extern "C" {
-    pub fn godot_basis_get_elements(p_basis: *mut godot_basis,
-                                    p_elements: *mut godot_vector3);
+    pub fn godot_basis_set_axis(p_self: *mut godot_basis, p_axis: godot_int,
+                                p_value: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_get_row(p_self: *const godot_basis, p_row: godot_int)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_basis_set_row(p_self: *mut godot_basis, p_row: godot_int,
+                               p_value: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_basis_operator_equal(p_self: *const godot_basis,
+                                      p_b: *const godot_basis) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_basis_operator_add(p_self: *const godot_basis,
+                                    p_b: *const godot_basis) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_operator_substract(p_self: *const godot_basis,
+                                          p_b: *const godot_basis)
+     -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_operator_multiply_vector(p_self: *const godot_basis,
+                                                p_b: *const godot_basis)
+     -> godot_basis;
+}
+extern "C" {
+    pub fn godot_basis_operator_multiply_scalar(p_self: *const godot_basis,
+                                                p_b: godot_real)
+     -> godot_basis;
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum godot_vector3_axis {
+    GODOT_VECTOR3_AXIS_X = 0,
+    GODOT_VECTOR3_AXIS_Y = 1,
+    GODOT_VECTOR3_AXIS_Z = 2,
+}
+extern "C" {
+    pub fn godot_vector3_new(r_dest: *mut godot_vector3, p_x: godot_real,
+                             p_y: godot_real, p_z: godot_real);
+}
+extern "C" {
+    pub fn godot_vector3_as_string(p_self: *const godot_vector3)
+     -> godot_string;
+}
+extern "C" {
+    pub fn godot_vector3_min_axis(p_self: *const godot_vector3) -> godot_int;
+}
+extern "C" {
+    pub fn godot_vector3_max_axis(p_self: *const godot_vector3) -> godot_int;
+}
+extern "C" {
+    pub fn godot_vector3_length(p_self: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_length_squared(p_self: *const godot_vector3)
+     -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_is_normalized(p_self: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_vector3_normalized(p_self: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_inverse(p_self: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_snapped(p_self: *const godot_vector3,
+                                 p_by: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_rotated(p_self: *const godot_vector3,
+                                 p_axis: *const godot_vector3,
+                                 p_phi: godot_real) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_linear_interpolate(p_self: *const godot_vector3,
+                                            p_b: *const godot_vector3,
+                                            p_t: godot_real) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_cubic_interpolate(p_self: *const godot_vector3,
+                                           p_b: *const godot_vector3,
+                                           p_pre_a: *const godot_vector3,
+                                           p_post_b: *const godot_vector3,
+                                           p_t: godot_real) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_dot(p_self: *const godot_vector3,
+                             p_b: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_cross(p_self: *const godot_vector3,
+                               p_b: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_outer(p_self: *const godot_vector3,
+                               p_b: *const godot_vector3) -> godot_basis;
+}
+extern "C" {
+    pub fn godot_vector3_to_diagonal_matrix(p_self: *const godot_vector3)
+     -> godot_basis;
+}
+extern "C" {
+    pub fn godot_vector3_abs(p_self: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_floor(p_self: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_ceil(p_self: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_distance_to(p_self: *const godot_vector3,
+                                     p_b: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_distance_squared_to(p_self: *const godot_vector3,
+                                             p_b: *const godot_vector3)
+     -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_angle_to(p_self: *const godot_vector3,
+                                  p_to: *const godot_vector3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_vector3_slide(p_self: *const godot_vector3,
+                               p_n: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_bounce(p_self: *const godot_vector3,
+                                p_n: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_reflect(p_self: *const godot_vector3,
+                                 p_n: *const godot_vector3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_add(p_self: *const godot_vector3,
+                                      p_b: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_substract(p_self: *const godot_vector3,
+                                            p_b: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_multiply_vector(p_self:
+                                                      *const godot_vector3,
+                                                  p_b: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_multiply_scalar(p_self:
+                                                      *const godot_vector3,
+                                                  p_b: godot_real)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_divide_vector(p_self: *const godot_vector3,
+                                                p_b: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_divide_scalar(p_self: *const godot_vector3,
+                                                p_b: godot_real)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_operator_equal(p_self: *const godot_vector3,
+                                        p_b: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_vector3_operator_less(p_self: *const godot_vector3,
+                                       p_b: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_vector3_operator_neg(p_self: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_vector3_set_axis(p_self: *mut godot_vector3,
+                                  p_axis: godot_vector3_axis,
+                                  p_val: godot_real);
+}
+extern "C" {
+    pub fn godot_vector3_get_axis(p_self: *const godot_vector3,
+                                  p_axis: godot_vector3_axis) -> godot_real;
 }
 #[repr(C)]
-pub struct godot_transform {
-    pub _dont_touch_that: [u8; 48usize],
+#[derive(Debug, Copy)]
+pub struct godot_transform2d {
+    pub _dont_touch_that: [u8; 24usize],
 }
 #[test]
-fn bindgen_test_layout_godot_transform() {
-    assert_eq!(::std::mem::size_of::<godot_transform>() , 48usize , concat ! (
-               "Size of: " , stringify ! ( godot_transform ) ));
-    assert_eq! (::std::mem::align_of::<godot_transform>() , 1usize , concat !
-                ( "Alignment of " , stringify ! ( godot_transform ) ));
+fn bindgen_test_layout_godot_transform2d() {
+    assert_eq!(::std::mem::size_of::<godot_transform2d>() , 24usize , concat !
+               ( "Size of: " , stringify ! ( godot_transform2d ) ));
+    assert_eq! (::std::mem::align_of::<godot_transform2d>() , 1usize , concat
+                ! ( "Alignment of " , stringify ! ( godot_transform2d ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_transform ) ) . _dont_touch_that as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_transform ) ,
+                & ( * ( 0 as * const godot_transform2d ) ) . _dont_touch_that
+                as * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_transform2d ) ,
                 "::" , stringify ! ( _dont_touch_that ) ));
 }
-extern "C" {
-    pub fn godot_transform_new(p_trans: *mut godot_transform);
-}
-extern "C" {
-    pub fn godot_transform_new_with_basis(p_trans: *mut godot_transform,
-                                          p_basis: *const godot_basis);
-}
-extern "C" {
-    pub fn godot_transform_new_with_basis_origin(p_trans:
-                                                     *mut godot_transform,
-                                                 p_basis: *const godot_basis,
-                                                 p_origin:
-                                                     *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_transform_get_basis(p_trans: *mut godot_transform)
-     -> *mut godot_basis;
-}
-extern "C" {
-    pub fn godot_transform_get_origin(p_trans: *mut godot_transform)
-     -> *mut godot_vector3;
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_color {
-    pub _dont_touch_that: [u8; 16usize],
-}
-#[test]
-fn bindgen_test_layout_godot_color() {
-    assert_eq!(::std::mem::size_of::<godot_color>() , 16usize , concat ! (
-               "Size of: " , stringify ! ( godot_color ) ));
-    assert_eq! (::std::mem::align_of::<godot_color>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_color ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_color ) ) . _dont_touch_that as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_color ) , "::" ,
-                stringify ! ( _dont_touch_that ) ));
-}
-impl Clone for godot_color {
+impl Clone for godot_transform2d {
     fn clone(&self) -> Self { *self }
 }
-extern "C" {
-    pub fn godot_color_new(p_color: *mut godot_color);
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct godot_variant {
+    pub _dont_touch_that: [u8; 24usize],
 }
-extern "C" {
-    pub fn godot_color_new_rgba(p_color: *mut godot_color, r: godot_real,
-                                g: godot_real, b: godot_real, a: godot_real);
+#[test]
+fn bindgen_test_layout_godot_variant() {
+    assert_eq!(::std::mem::size_of::<godot_variant>() , 24usize , concat ! (
+               "Size of: " , stringify ! ( godot_variant ) ));
+    assert_eq! (::std::mem::align_of::<godot_variant>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_variant ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_variant ) ) . _dont_touch_that as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_variant ) , "::"
+                , stringify ! ( _dont_touch_that ) ));
 }
-extern "C" {
-    pub fn godot_color_get_32(p_color: *const godot_color) -> u32;
+impl Clone for godot_variant {
+    fn clone(&self) -> Self { *self }
 }
-extern "C" {
-    pub fn godot_color_index(p_color: *mut godot_color, idx: godot_int)
-     -> *mut f32;
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum godot_variant_type {
+    GODOT_VARIANT_TYPE_NIL = 0,
+    GODOT_VARIANT_TYPE_BOOL = 1,
+    GODOT_VARIANT_TYPE_INT = 2,
+    GODOT_VARIANT_TYPE_REAL = 3,
+    GODOT_VARIANT_TYPE_STRING = 4,
+    GODOT_VARIANT_TYPE_VECTOR2 = 5,
+    GODOT_VARIANT_TYPE_RECT2 = 6,
+    GODOT_VARIANT_TYPE_VECTOR3 = 7,
+    GODOT_VARIANT_TYPE_TRANSFORM2D = 8,
+    GODOT_VARIANT_TYPE_PLANE = 9,
+    GODOT_VARIANT_TYPE_QUAT = 10,
+    GODOT_VARIANT_TYPE_RECT3 = 11,
+    GODOT_VARIANT_TYPE_BASIS = 12,
+    GODOT_VARIANT_TYPE_TRANSFORM = 13,
+    GODOT_VARIANT_TYPE_COLOR = 14,
+    GODOT_VARIANT_TYPE_NODE_PATH = 15,
+    GODOT_VARIANT_TYPE_RID = 16,
+    GODOT_VARIANT_TYPE_OBJECT = 17,
+    GODOT_VARIANT_TYPE_DICTIONARY = 18,
+    GODOT_VARIANT_TYPE_ARRAY = 19,
+    GODOT_VARIANT_TYPE_POOL_BYTE_ARRAY = 20,
+    GODOT_VARIANT_TYPE_POOL_INT_ARRAY = 21,
+    GODOT_VARIANT_TYPE_POOL_REAL_ARRAY = 22,
+    GODOT_VARIANT_TYPE_POOL_STRING_ARRAY = 23,
+    GODOT_VARIANT_TYPE_POOL_VECTOR2_ARRAY = 24,
+    GODOT_VARIANT_TYPE_POOL_VECTOR3_ARRAY = 25,
+    GODOT_VARIANT_TYPE_POOL_COLOR_ARRAY = 26,
+}
+#[repr(u32)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
+pub enum godot_variant_call_error_error {
+    GODOT_CALL_ERROR_CALL_OK = 0,
+    GODOT_CALL_ERROR_CALL_ERROR_INVALID_METHOD = 1,
+    GODOT_CALL_ERROR_CALL_ERROR_INVALID_ARGUMENT = 2,
+    GODOT_CALL_ERROR_CALL_ERROR_TOO_MANY_ARGUMENTS = 3,
+    GODOT_CALL_ERROR_CALL_ERROR_TOO_FEW_ARGUMENTS = 4,
+    GODOT_CALL_ERROR_CALL_ERROR_INSTANCE_IS_NULL = 5,
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct godot_image {
-    pub _dont_touch_that: [u8; 32usize],
+pub struct godot_variant_call_error {
+    pub error: godot_variant_call_error_error,
+    pub argument: ::std::os::raw::c_int,
+    pub expected: godot_variant_type,
 }
 #[test]
-fn bindgen_test_layout_godot_image() {
-    assert_eq!(::std::mem::size_of::<godot_image>() , 32usize , concat ! (
-               "Size of: " , stringify ! ( godot_image ) ));
-    assert_eq! (::std::mem::align_of::<godot_image>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_image ) ));
+fn bindgen_test_layout_godot_variant_call_error() {
+    assert_eq!(::std::mem::size_of::<godot_variant_call_error>() , 12usize ,
+               concat ! (
+               "Size of: " , stringify ! ( godot_variant_call_error ) ));
+    assert_eq! (::std::mem::align_of::<godot_variant_call_error>() , 4usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( godot_variant_call_error ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_image ) ) . _dont_touch_that as *
+                & ( * ( 0 as * const godot_variant_call_error ) ) . error as *
                 const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_image ) , "::" ,
+                "Alignment of field: " , stringify ! (
+                godot_variant_call_error ) , "::" , stringify ! ( error ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_variant_call_error ) ) . argument
+                as * const _ as usize } , 4usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                godot_variant_call_error ) , "::" , stringify ! ( argument )
+                ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_variant_call_error ) ) . expected
+                as * const _ as usize } , 8usize , concat ! (
+                "Alignment of field: " , stringify ! (
+                godot_variant_call_error ) , "::" , stringify ! ( expected )
+                ));
+}
+impl Clone for godot_variant_call_error {
+    fn clone(&self) -> Self { *self }
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct godot_array {
+    pub _dont_touch_that: [u8; 8usize],
+}
+#[test]
+fn bindgen_test_layout_godot_array() {
+    assert_eq!(::std::mem::size_of::<godot_array>() , 8usize , concat ! (
+               "Size of: " , stringify ! ( godot_array ) ));
+    assert_eq! (::std::mem::align_of::<godot_array>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_array ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_array ) ) . _dont_touch_that as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_array ) , "::" ,
                 stringify ! ( _dont_touch_that ) ));
 }
-impl Clone for godot_image {
+impl Clone for godot_array {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
@@ -1395,43 +1812,690 @@ impl Clone for godot_pool_color_array {
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct godot_array {
-    pub _dont_touch_that: [u8; 8usize],
+pub struct godot_color {
+    pub _dont_touch_that: [u8; 16usize],
 }
 #[test]
-fn bindgen_test_layout_godot_array() {
-    assert_eq!(::std::mem::size_of::<godot_array>() , 8usize , concat ! (
-               "Size of: " , stringify ! ( godot_array ) ));
-    assert_eq! (::std::mem::align_of::<godot_array>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_array ) ));
+fn bindgen_test_layout_godot_color() {
+    assert_eq!(::std::mem::size_of::<godot_color>() , 16usize , concat ! (
+               "Size of: " , stringify ! ( godot_color ) ));
+    assert_eq! (::std::mem::align_of::<godot_color>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_color ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_array ) ) . _dont_touch_that as *
+                & ( * ( 0 as * const godot_color ) ) . _dont_touch_that as *
                 const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_array ) , "::" ,
+                "Alignment of field: " , stringify ! ( godot_color ) , "::" ,
                 stringify ! ( _dont_touch_that ) ));
 }
-impl Clone for godot_array {
+impl Clone for godot_color {
     fn clone(&self) -> Self { *self }
 }
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_variant {
-    pub _dont_touch_that: [u8; 24usize],
+extern "C" {
+    pub fn godot_color_new_rgba(r_dest: *mut godot_color, p_r: godot_real,
+                                p_g: godot_real, p_b: godot_real,
+                                p_a: godot_real);
 }
-#[test]
-fn bindgen_test_layout_godot_variant() {
-    assert_eq!(::std::mem::size_of::<godot_variant>() , 24usize , concat ! (
-               "Size of: " , stringify ! ( godot_variant ) ));
-    assert_eq! (::std::mem::align_of::<godot_variant>() , 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_variant ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_variant ) ) . _dont_touch_that as *
-                const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_variant ) , "::"
-                , stringify ! ( _dont_touch_that ) ));
+extern "C" {
+    pub fn godot_color_new_rgb(r_dest: *mut godot_color, p_r: godot_real,
+                               p_g: godot_real, p_b: godot_real);
 }
-impl Clone for godot_variant {
-    fn clone(&self) -> Self { *self }
+extern "C" {
+    pub fn godot_color_get_r(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_set_r(p_self: *mut godot_color, r: godot_real);
+}
+extern "C" {
+    pub fn godot_color_get_g(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_set_g(p_self: *mut godot_color, g: godot_real);
+}
+extern "C" {
+    pub fn godot_color_get_b(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_set_b(p_self: *mut godot_color, b: godot_real);
+}
+extern "C" {
+    pub fn godot_color_get_a(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_set_a(p_self: *mut godot_color, a: godot_real);
+}
+extern "C" {
+    pub fn godot_color_get_h(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_get_s(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_get_v(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_as_string(p_self: *const godot_color) -> godot_string;
+}
+extern "C" {
+    pub fn godot_color_to_32(p_self: *const godot_color) -> godot_int;
+}
+extern "C" {
+    pub fn godot_color_to_ARGB32(p_self: *const godot_color) -> godot_int;
+}
+extern "C" {
+    pub fn godot_color_gray(p_self: *const godot_color) -> godot_real;
+}
+extern "C" {
+    pub fn godot_color_inverted(p_self: *const godot_color) -> godot_color;
+}
+extern "C" {
+    pub fn godot_color_contrasted(p_self: *const godot_color) -> godot_color;
+}
+extern "C" {
+    pub fn godot_color_linear_interpolate(p_self: *const godot_color,
+                                          p_b: *const godot_color,
+                                          p_t: godot_real) -> godot_color;
+}
+extern "C" {
+    pub fn godot_color_blend(p_self: *const godot_color,
+                             p_over: *const godot_color) -> godot_color;
+}
+extern "C" {
+    pub fn godot_color_to_html(p_self: *const godot_color,
+                               p_with_alpha: godot_bool) -> godot_string;
+}
+extern "C" {
+    pub fn godot_color_operator_equal(p_self: *const godot_color,
+                                      p_b: *const godot_color) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_color_operator_less(p_self: *const godot_color,
+                                     p_b: *const godot_color) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_pool_byte_array_new(r_dest: *mut godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_new_copy(r_dest: *mut godot_pool_byte_array,
+                                          p_src:
+                                              *const godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_new_with_array(r_dest:
+                                                    *mut godot_pool_byte_array,
+                                                p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_append(p_self: *mut godot_pool_byte_array,
+                                        p_data: u8);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_append_array(p_self:
+                                                  *mut godot_pool_byte_array,
+                                              p_array:
+                                                  *const godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_insert(p_self: *mut godot_pool_byte_array,
+                                        p_idx: godot_int, p_data: u8)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_byte_array_invert(p_self: *mut godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_push_back(p_self: *mut godot_pool_byte_array,
+                                           p_data: u8);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_remove(p_self: *mut godot_pool_byte_array,
+                                        p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_resize(p_self: *mut godot_pool_byte_array,
+                                        p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_set(p_self: *mut godot_pool_byte_array,
+                                     p_idx: godot_int, p_data: u8);
+}
+extern "C" {
+    pub fn godot_pool_byte_array_get(p_self: *const godot_pool_byte_array,
+                                     p_idx: godot_int) -> u8;
+}
+extern "C" {
+    pub fn godot_pool_byte_array_size(p_self: *const godot_pool_byte_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_byte_array_destroy(p_self: *mut godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_new(r_dest: *mut godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_new_copy(r_dest: *mut godot_pool_int_array,
+                                         p_src: *const godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_new_with_array(r_dest:
+                                                   *mut godot_pool_int_array,
+                                               p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_append(p_self: *mut godot_pool_int_array,
+                                       p_data: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_int_array_append_array(p_self:
+                                                 *mut godot_pool_int_array,
+                                             p_array:
+                                                 *const godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_insert(p_self: *mut godot_pool_int_array,
+                                       p_idx: godot_int, p_data: godot_int)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_int_array_invert(p_self: *mut godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_pool_int_array_push_back(p_self: *mut godot_pool_int_array,
+                                          p_data: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_int_array_remove(p_self: *mut godot_pool_int_array,
+                                       p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_int_array_resize(p_self: *mut godot_pool_int_array,
+                                       p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_int_array_set(p_self: *mut godot_pool_int_array,
+                                    p_idx: godot_int, p_data: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_int_array_get(p_self: *const godot_pool_int_array,
+                                    p_idx: godot_int) -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_int_array_size(p_self: *const godot_pool_int_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_int_array_destroy(p_self: *mut godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_new(r_dest: *mut godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_new_copy(r_dest: *mut godot_pool_real_array,
+                                          p_src:
+                                              *const godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_new_with_array(r_dest:
+                                                    *mut godot_pool_real_array,
+                                                p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_append(p_self: *mut godot_pool_real_array,
+                                        p_data: godot_real);
+}
+extern "C" {
+    pub fn godot_pool_real_array_append_array(p_self:
+                                                  *mut godot_pool_real_array,
+                                              p_array:
+                                                  *const godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_insert(p_self: *mut godot_pool_real_array,
+                                        p_idx: godot_int, p_data: godot_real)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_real_array_invert(p_self: *mut godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_pool_real_array_push_back(p_self: *mut godot_pool_real_array,
+                                           p_data: godot_real);
+}
+extern "C" {
+    pub fn godot_pool_real_array_remove(p_self: *mut godot_pool_real_array,
+                                        p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_real_array_resize(p_self: *mut godot_pool_real_array,
+                                        p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_real_array_set(p_self: *mut godot_pool_real_array,
+                                     p_idx: godot_int, p_data: godot_real);
+}
+extern "C" {
+    pub fn godot_pool_real_array_get(p_self: *const godot_pool_real_array,
+                                     p_idx: godot_int) -> godot_real;
+}
+extern "C" {
+    pub fn godot_pool_real_array_size(p_self: *const godot_pool_real_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_real_array_destroy(p_self: *mut godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_new(r_dest: *mut godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_new_copy(r_dest:
+                                                *mut godot_pool_string_array,
+                                            p_src:
+                                                *const godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_new_with_array(r_dest:
+                                                      *mut godot_pool_string_array,
+                                                  p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_append(p_self:
+                                              *mut godot_pool_string_array,
+                                          p_data: *const godot_string);
+}
+extern "C" {
+    pub fn godot_pool_string_array_append_array(p_self:
+                                                    *mut godot_pool_string_array,
+                                                p_array:
+                                                    *const godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_insert(p_self:
+                                              *mut godot_pool_string_array,
+                                          p_idx: godot_int,
+                                          p_data: *const godot_string)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_string_array_invert(p_self:
+                                              *mut godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_pool_string_array_push_back(p_self:
+                                                 *mut godot_pool_string_array,
+                                             p_data: *const godot_string);
+}
+extern "C" {
+    pub fn godot_pool_string_array_remove(p_self:
+                                              *mut godot_pool_string_array,
+                                          p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_string_array_resize(p_self:
+                                              *mut godot_pool_string_array,
+                                          p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_string_array_set(p_self: *mut godot_pool_string_array,
+                                       p_idx: godot_int,
+                                       p_data: *const godot_string);
+}
+extern "C" {
+    pub fn godot_pool_string_array_get(p_self: *const godot_pool_string_array,
+                                       p_idx: godot_int) -> godot_string;
+}
+extern "C" {
+    pub fn godot_pool_string_array_size(p_self:
+                                            *const godot_pool_string_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_string_array_destroy(p_self:
+                                               *mut godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_new(r_dest:
+                                            *mut godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_new_copy(r_dest:
+                                                 *mut godot_pool_vector2_array,
+                                             p_src:
+                                                 *const godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_new_with_array(r_dest:
+                                                       *mut godot_pool_vector2_array,
+                                                   p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_append(p_self:
+                                               *mut godot_pool_vector2_array,
+                                           p_data: *const godot_vector2);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_append_array(p_self:
+                                                     *mut godot_pool_vector2_array,
+                                                 p_array:
+                                                     *const godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_insert(p_self:
+                                               *mut godot_pool_vector2_array,
+                                           p_idx: godot_int,
+                                           p_data: *const godot_vector2)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_invert(p_self:
+                                               *mut godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_push_back(p_self:
+                                                  *mut godot_pool_vector2_array,
+                                              p_data: *const godot_vector2);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_remove(p_self:
+                                               *mut godot_pool_vector2_array,
+                                           p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_resize(p_self:
+                                               *mut godot_pool_vector2_array,
+                                           p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_set(p_self: *mut godot_pool_vector2_array,
+                                        p_idx: godot_int,
+                                        p_data: *const godot_vector2);
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_get(p_self:
+                                            *const godot_pool_vector2_array,
+                                        p_idx: godot_int) -> godot_vector2;
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_size(p_self:
+                                             *const godot_pool_vector2_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_vector2_array_destroy(p_self:
+                                                *mut godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_new(r_dest:
+                                            *mut godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_new_copy(r_dest:
+                                                 *mut godot_pool_vector3_array,
+                                             p_src:
+                                                 *const godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_new_with_array(r_dest:
+                                                       *mut godot_pool_vector3_array,
+                                                   p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_append(p_self:
+                                               *mut godot_pool_vector3_array,
+                                           p_data: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_append_array(p_self:
+                                                     *mut godot_pool_vector3_array,
+                                                 p_array:
+                                                     *const godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_insert(p_self:
+                                               *mut godot_pool_vector3_array,
+                                           p_idx: godot_int,
+                                           p_data: *const godot_vector3)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_invert(p_self:
+                                               *mut godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_push_back(p_self:
+                                                  *mut godot_pool_vector3_array,
+                                              p_data: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_remove(p_self:
+                                               *mut godot_pool_vector3_array,
+                                           p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_resize(p_self:
+                                               *mut godot_pool_vector3_array,
+                                           p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_set(p_self: *mut godot_pool_vector3_array,
+                                        p_idx: godot_int,
+                                        p_data: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_get(p_self:
+                                            *const godot_pool_vector3_array,
+                                        p_idx: godot_int) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_size(p_self:
+                                             *const godot_pool_vector3_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_vector3_array_destroy(p_self:
+                                                *mut godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_new(r_dest: *mut godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_new_copy(r_dest:
+                                               *mut godot_pool_color_array,
+                                           p_src:
+                                               *const godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_new_with_array(r_dest:
+                                                     *mut godot_pool_color_array,
+                                                 p_a: *const godot_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_append(p_self: *mut godot_pool_color_array,
+                                         p_data: *const godot_color);
+}
+extern "C" {
+    pub fn godot_pool_color_array_append_array(p_self:
+                                                   *mut godot_pool_color_array,
+                                               p_array:
+                                                   *const godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_insert(p_self: *mut godot_pool_color_array,
+                                         p_idx: godot_int,
+                                         p_data: *const godot_color)
+     -> godot_error;
+}
+extern "C" {
+    pub fn godot_pool_color_array_invert(p_self: *mut godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_pool_color_array_push_back(p_self:
+                                                *mut godot_pool_color_array,
+                                            p_data: *const godot_color);
+}
+extern "C" {
+    pub fn godot_pool_color_array_remove(p_self: *mut godot_pool_color_array,
+                                         p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_color_array_resize(p_self: *mut godot_pool_color_array,
+                                         p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_pool_color_array_set(p_self: *mut godot_pool_color_array,
+                                      p_idx: godot_int,
+                                      p_data: *const godot_color);
+}
+extern "C" {
+    pub fn godot_pool_color_array_get(p_self: *const godot_pool_color_array,
+                                      p_idx: godot_int) -> godot_color;
+}
+extern "C" {
+    pub fn godot_pool_color_array_size(p_self: *const godot_pool_color_array)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_pool_color_array_destroy(p_self:
+                                              *mut godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_array_new(r_dest: *mut godot_array);
+}
+extern "C" {
+    pub fn godot_array_new_copy(r_dest: *mut godot_array,
+                                p_src: *const godot_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_color_array(r_dest: *mut godot_array,
+                                            p_pca:
+                                                *const godot_pool_color_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_vector3_array(r_dest: *mut godot_array,
+                                              p_pv3a:
+                                                  *const godot_pool_vector3_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_vector2_array(r_dest: *mut godot_array,
+                                              p_pv2a:
+                                                  *const godot_pool_vector2_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_string_array(r_dest: *mut godot_array,
+                                             p_psa:
+                                                 *const godot_pool_string_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_real_array(r_dest: *mut godot_array,
+                                           p_pra:
+                                               *const godot_pool_real_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_int_array(r_dest: *mut godot_array,
+                                          p_pia: *const godot_pool_int_array);
+}
+extern "C" {
+    pub fn godot_array_new_pool_byte_array(r_dest: *mut godot_array,
+                                           p_pba:
+                                               *const godot_pool_byte_array);
+}
+extern "C" {
+    pub fn godot_array_set(p_self: *mut godot_array, p_idx: godot_int,
+                           p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_get(p_self: *const godot_array, p_idx: godot_int)
+     -> godot_variant;
+}
+extern "C" {
+    pub fn godot_array_operator_index(p_self: *mut godot_array,
+                                      p_idx: godot_int) -> *mut godot_variant;
+}
+extern "C" {
+    pub fn godot_array_append(p_self: *mut godot_array,
+                              p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_clear(p_self: *mut godot_array);
+}
+extern "C" {
+    pub fn godot_array_count(p_self: *const godot_array,
+                             p_value: *const godot_variant) -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_empty(p_self: *const godot_array) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_array_erase(p_self: *mut godot_array,
+                             p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_front(p_self: *const godot_array) -> godot_variant;
+}
+extern "C" {
+    pub fn godot_array_back(p_self: *const godot_array) -> godot_variant;
+}
+extern "C" {
+    pub fn godot_array_find(p_self: *const godot_array,
+                            p_what: *const godot_variant, p_from: godot_int)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_find_last(p_self: *const godot_array,
+                                 p_what: *const godot_variant) -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_has(p_self: *const godot_array,
+                           p_value: *const godot_variant) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_array_hash(p_self: *const godot_array) -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_insert(p_self: *mut godot_array, p_pos: godot_int,
+                              p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_invert(p_self: *mut godot_array);
+}
+extern "C" {
+    pub fn godot_array_pop_back(p_self: *mut godot_array) -> godot_variant;
+}
+extern "C" {
+    pub fn godot_array_pop_front(p_self: *mut godot_array) -> godot_variant;
+}
+extern "C" {
+    pub fn godot_array_push_back(p_self: *mut godot_array,
+                                 p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_push_front(p_self: *mut godot_array,
+                                  p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_array_remove(p_self: *mut godot_array, p_idx: godot_int);
+}
+extern "C" {
+    pub fn godot_array_resize(p_self: *mut godot_array, p_size: godot_int);
+}
+extern "C" {
+    pub fn godot_array_rfind(p_self: *const godot_array,
+                             p_what: *const godot_variant, p_from: godot_int)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_size(p_self: *const godot_array) -> godot_int;
+}
+extern "C" {
+    pub fn godot_array_sort(p_self: *mut godot_array);
+}
+extern "C" {
+    pub fn godot_array_sort_custom(p_self: *mut godot_array,
+                                   p_obj: *mut godot_object,
+                                   p_func: *const godot_string);
+}
+extern "C" {
+    pub fn godot_array_destroy(p_self: *mut godot_array);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -1454,466 +2518,77 @@ impl Clone for godot_dictionary {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_dictionary_new(p_dict: *mut godot_dictionary);
+    pub fn godot_dictionary_new(r_dest: *mut godot_dictionary);
 }
 extern "C" {
-    pub fn godot_dictionary_clear(p_dict: *mut godot_dictionary);
+    pub fn godot_dictionary_new_copy(r_dest: *mut godot_dictionary,
+                                     p_src: *const godot_dictionary);
 }
 extern "C" {
-    pub fn godot_dictionary_empty(p_dict: *const godot_dictionary)
-     -> godot_bool;
+    pub fn godot_dictionary_destroy(p_self: *mut godot_dictionary);
 }
 extern "C" {
-    pub fn godot_dictionary_erase(p_dict: *mut godot_dictionary,
-                                  p_key: *const godot_variant);
-}
-extern "C" {
-    pub fn godot_dictionary_has(p_dict: *const godot_dictionary,
-                                p_key: *const godot_variant) -> godot_bool;
-}
-extern "C" {
-    pub fn godot_dictionary_has_all(p_dict: *const godot_dictionary,
-                                    p_keys: *const godot_array) -> godot_bool;
-}
-extern "C" {
-    pub fn godot_dictionary_hash(p_dict: *const godot_dictionary) -> u32;
-}
-extern "C" {
-    pub fn godot_dictionary_keys(p_dict: *const godot_dictionary)
-     -> godot_array;
-}
-extern "C" {
-    pub fn godot_dictionary_parse_json(p_dict: *mut godot_dictionary,
-                                       p_json: *const godot_string)
+    pub fn godot_dictionary_size(p_self: *const godot_dictionary)
      -> godot_int;
 }
 extern "C" {
-    pub fn godot_dictionary_operator_index(p_dict: *mut godot_dictionary,
+    pub fn godot_dictionary_empty(p_self: *const godot_dictionary)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_dictionary_clear(p_self: *mut godot_dictionary);
+}
+extern "C" {
+    pub fn godot_dictionary_has(p_self: *const godot_dictionary,
+                                p_key: *const godot_variant) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_dictionary_has_all(p_self: *const godot_dictionary,
+                                    p_keys: *const godot_array) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_dictionary_erase(p_self: *mut godot_dictionary,
+                                  p_key: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_dictionary_hash(p_self: *const godot_dictionary)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_dictionary_keys(p_self: *const godot_dictionary)
+     -> godot_array;
+}
+extern "C" {
+    pub fn godot_dictionary_values(p_self: *const godot_dictionary)
+     -> godot_array;
+}
+extern "C" {
+    pub fn godot_dictionary_get(p_self: *const godot_dictionary,
+                                p_key: *const godot_variant) -> godot_variant;
+}
+extern "C" {
+    pub fn godot_dictionary_set(p_self: *mut godot_dictionary,
+                                p_key: *const godot_variant,
+                                p_value: *const godot_variant);
+}
+extern "C" {
+    pub fn godot_dictionary_operator_index(p_self: *mut godot_dictionary,
                                            p_key: *const godot_variant)
      -> *mut godot_variant;
 }
 extern "C" {
-    pub fn godot_dictionary_size(p_dict: *const godot_dictionary)
-     -> godot_int;
+    pub fn godot_dictionary_next(p_self: *const godot_dictionary,
+                                 p_key: *const godot_variant)
+     -> *mut godot_variant;
 }
 extern "C" {
-    pub fn godot_dictionary_to_json(p_dict: *const godot_dictionary)
+    pub fn godot_dictionary_operator_equal(p_self: *const godot_dictionary,
+                                           p_b: *const godot_dictionary)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_dictionary_to_json(p_self: *const godot_dictionary)
      -> godot_string;
-}
-extern "C" {
-    pub fn godot_dictionary_values(p_dict: *const godot_dictionary)
-     -> godot_array;
-}
-extern "C" {
-    pub fn godot_dictionary_destroy(p_dict: *mut godot_dictionary);
-}
-#[repr(C)]
-pub struct godot_input_event {
-    pub _dont_touch_that: [u8; 56usize],
-}
-#[test]
-fn bindgen_test_layout_godot_input_event() {
-    assert_eq!(::std::mem::size_of::<godot_input_event>() , 56usize , concat !
-               ( "Size of: " , stringify ! ( godot_input_event ) ));
-    assert_eq! (::std::mem::align_of::<godot_input_event>() , 1usize , concat
-                ! ( "Alignment of " , stringify ! ( godot_input_event ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_input_event ) ) . _dont_touch_that
-                as * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_input_event ) ,
-                "::" , stringify ! ( _dont_touch_that ) ));
-}
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum godot_input_event_type {
-    GODOT_INPUT_EVENT_TYPE_NONE = 0,
-    GODOT_INPUT_EVENT_TYPE_KEY = 1,
-    GODOT_INPUT_EVENT_TYPE_MOUSE_MOTION = 2,
-    GODOT_INPUT_EVENT_TYPE_MOUSE_BUTTON = 3,
-    GODOT_INPUT_EVENT_TYPE_JOYPAD_MOTION = 4,
-    GODOT_INPUT_EVENT_TYPE_JOYPAD_BUTTON = 5,
-    GODOT_INPUT_EVENT_TYPE_SCREEN_TOUCH = 6,
-    GODOT_INPUT_EVENT_TYPE_SCREEN_DRAG = 7,
-    GODOT_INPUT_EVENT_TYPE_ACTION = 8,
-    GODOT_INPUT_EVENT_TYPE_TYPE_MAX = 9,
-}
-pub const GODOT_BUTTON_LEFT: _bindgen_ty_1 = _bindgen_ty_1::GODOT_BUTTON_LEFT;
-pub const GODOT_BUTTON_RIGHT: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_RIGHT;
-pub const GODOT_BUTTON_MIDDLE: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_MIDDLE;
-pub const GODOT_BUTTON_WHEEL_UP: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_WHEEL_UP;
-pub const GODOT_BUTTON_WHEEL_DOWN: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_WHEEL_DOWN;
-pub const GODOT_BUTTON_WHEEL_LEFT: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_WHEEL_LEFT;
-pub const GODOT_BUTTON_WHEEL_RIGHT: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_WHEEL_RIGHT;
-pub const GODOT_BUTTON_MASK_LEFT: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_LEFT;
-pub const GODOT_BUTTON_MASK_RIGHT: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_RIGHT;
-pub const GODOT_BUTTON_MASK_MIDDLE: _bindgen_ty_1 =
-    _bindgen_ty_1::GODOT_BUTTON_WHEEL_UP;
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_1 {
-    GODOT_BUTTON_LEFT = 1,
-    GODOT_BUTTON_RIGHT = 2,
-    GODOT_BUTTON_MIDDLE = 3,
-    GODOT_BUTTON_WHEEL_UP = 4,
-    GODOT_BUTTON_WHEEL_DOWN = 5,
-    GODOT_BUTTON_WHEEL_LEFT = 6,
-    GODOT_BUTTON_WHEEL_RIGHT = 7,
-}
-pub const GODOT_JOY_BUTTON_0: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_BUTTON_1: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_BUTTON_2: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_BUTTON_3: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_BUTTON_4: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_4;
-pub const GODOT_JOY_BUTTON_5: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_5;
-pub const GODOT_JOY_BUTTON_6: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_6;
-pub const GODOT_JOY_BUTTON_7: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_7;
-pub const GODOT_JOY_BUTTON_8: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_8;
-pub const GODOT_JOY_BUTTON_9: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_9;
-pub const GODOT_JOY_BUTTON_10: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_10;
-pub const GODOT_JOY_BUTTON_11: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_11;
-pub const GODOT_JOY_BUTTON_12: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_12;
-pub const GODOT_JOY_BUTTON_13: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_13;
-pub const GODOT_JOY_BUTTON_14: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_14;
-pub const GODOT_JOY_BUTTON_15: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_15;
-pub const GODOT_JOY_BUTTON_MAX: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_MAX;
-pub const GODOT_JOY_L: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_4;
-pub const GODOT_JOY_R: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_5;
-pub const GODOT_JOY_L2: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_6;
-pub const GODOT_JOY_R2: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_7;
-pub const GODOT_JOY_L3: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_8;
-pub const GODOT_JOY_R3: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_9;
-pub const GODOT_JOY_SELECT: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_10;
-pub const GODOT_JOY_START: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_11;
-pub const GODOT_JOY_DPAD_UP: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_12;
-pub const GODOT_JOY_DPAD_DOWN: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_13;
-pub const GODOT_JOY_DPAD_LEFT: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_14;
-pub const GODOT_JOY_DPAD_RIGHT: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_15;
-pub const GODOT_JOY_SNES_B: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_SNES_A: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_SNES_Y: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_SNES_X: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_SONY_CIRCLE: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_SONY_X: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_SONY_SQUARE: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_SONY_TRIANGLE: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_SEGA_B: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_SEGA_A: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_SEGA_X: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_SEGA_Y: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_XBOX_B: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_XBOX_A: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_XBOX_X: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_XBOX_Y: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_DS_A: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_DS_B: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_DS_X: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_DS_Y: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_WII_C: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_5;
-pub const GODOT_JOY_WII_Z: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_6;
-pub const GODOT_JOY_WII_MINUS: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_9;
-pub const GODOT_JOY_WII_PLUS: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_10;
-pub const GODOT_JOY_AXIS_0: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_AXIS_1: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_AXIS_2: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_AXIS_3: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_AXIS_4: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_4;
-pub const GODOT_JOY_AXIS_5: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_5;
-pub const GODOT_JOY_AXIS_6: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_6;
-pub const GODOT_JOY_AXIS_7: _bindgen_ty_2 = _bindgen_ty_2::GODOT_JOY_BUTTON_7;
-pub const GODOT_JOY_AXIS_MAX: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_8;
-pub const GODOT_JOY_ANALOG_0_X: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_0;
-pub const GODOT_JOY_ANALOG_0_Y: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_1;
-pub const GODOT_JOY_ANALOG_1_X: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_2;
-pub const GODOT_JOY_ANALOG_1_Y: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_3;
-pub const GODOT_JOY_ANALOG_2_X: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_4;
-pub const GODOT_JOY_ANALOG_2_Y: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_5;
-pub const GODOT_JOY_ANALOG_L2: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_6;
-pub const GODOT_JOY_ANALOG_R2: _bindgen_ty_2 =
-    _bindgen_ty_2::GODOT_JOY_BUTTON_7;
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum _bindgen_ty_2 {
-    GODOT_JOY_BUTTON_0 = 0,
-    GODOT_JOY_BUTTON_1 = 1,
-    GODOT_JOY_BUTTON_2 = 2,
-    GODOT_JOY_BUTTON_3 = 3,
-    GODOT_JOY_BUTTON_4 = 4,
-    GODOT_JOY_BUTTON_5 = 5,
-    GODOT_JOY_BUTTON_6 = 6,
-    GODOT_JOY_BUTTON_7 = 7,
-    GODOT_JOY_BUTTON_8 = 8,
-    GODOT_JOY_BUTTON_9 = 9,
-    GODOT_JOY_BUTTON_10 = 10,
-    GODOT_JOY_BUTTON_11 = 11,
-    GODOT_JOY_BUTTON_12 = 12,
-    GODOT_JOY_BUTTON_13 = 13,
-    GODOT_JOY_BUTTON_14 = 14,
-    GODOT_JOY_BUTTON_15 = 15,
-    GODOT_JOY_BUTTON_MAX = 16,
-}
-extern "C" {
-    pub fn godot_input_event_new(p_ie: *mut godot_input_event);
-}
-extern "C" {
-    pub fn godot_input_event_is_pressed(p_ie: *const godot_input_event)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_is_action(p_ie: *const godot_input_event,
-                                       p_action: *const godot_string)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_is_action_pressed(p_ie: *const godot_input_event,
-                                               p_action: *const godot_string)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_is_action_released(p_ie:
-                                                    *const godot_input_event,
-                                                p_action: *const godot_string)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_is_echo(p_ie: *const godot_input_event)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_set_as_action(p_ie: *mut godot_input_event,
-                                           p_action: *const godot_string,
-                                           p_pressed: godot_bool);
-}
-extern "C" {
-    pub fn godot_input_event_as_string(p_ie: *const godot_input_event)
-     -> godot_string;
-}
-extern "C" {
-    pub fn godot_input_event_get_id(p_ie: *mut godot_input_event) -> *mut u32;
-}
-extern "C" {
-    pub fn godot_input_event_get_type(p_ie: *mut godot_input_event)
-     -> *mut godot_input_event_type;
-}
-extern "C" {
-    pub fn godot_input_event_get_device(p_ie: *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_mod_get_alt(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mod_get_ctrl(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mod_get_command(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mod_get_shift(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mod_get_meta(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_key_get_scancode(p_event: *mut godot_input_event)
-     -> *mut u32;
-}
-extern "C" {
-    pub fn godot_input_event_key_get_unicode(p_event: *mut godot_input_event)
-     -> *mut u32;
-}
-extern "C" {
-    pub fn godot_input_event_key_get_pressed(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_key_get_echo(p_event: *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_get_x(p_event: *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_get_y(p_event: *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_get_global_x(p_event:
-                                                    *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_get_global_y(p_event:
-                                                    *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_get_button_mask(p_event:
-                                                       *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_button_get_button_index(p_event:
-                                                               *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_button_get_pressed(p_event:
-                                                          *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_button_get_doubleclick(p_event:
-                                                              *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_motion_get_relative_x(p_event:
-                                                             *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_motion_get_relative_y(p_event:
-                                                             *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_motion_get_speed_x(p_event:
-                                                          *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_mouse_motion_get_speed_y(p_event:
-                                                          *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_joypad_motion_get_axis(p_event:
-                                                        *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_joypad_motion_get_axis_value(p_event:
-                                                              *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_joypad_button_get_button_index(p_event:
-                                                                *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_joypad_button_get_pressed(p_event:
-                                                           *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_joypad_button_get_pressure(p_event:
-                                                            *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_touch_get_index(p_event:
-                                                        *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_screen_touch_get_x(p_event:
-                                                    *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_touch_get_y(p_event:
-                                                    *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_touch_get_pressed(p_event:
-                                                          *mut godot_input_event)
-     -> *mut godot_bool;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_index(p_event:
-                                                       *mut godot_input_event)
-     -> *mut godot_int;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_x(p_event:
-                                                   *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_y(p_event:
-                                                   *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_relative_x(p_event:
-                                                            *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_relative_y(p_event:
-                                                            *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_speed_x(p_event:
-                                                         *mut godot_input_event)
-     -> *mut f32;
-}
-extern "C" {
-    pub fn godot_input_event_screen_drag_get_speed_y(p_event:
-                                                         *mut godot_input_event)
-     -> *mut f32;
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -1936,47 +2611,294 @@ impl Clone for godot_node_path {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_node_path_new(p_np: *mut godot_node_path,
+    pub fn godot_node_path_new(r_dest: *mut godot_node_path,
                                p_from: *const godot_string);
 }
 extern "C" {
-    pub fn godot_node_path_copy(p_np: *mut godot_node_path,
-                                p_from: *const godot_node_path);
+    pub fn godot_node_path_new_copy(r_dest: *mut godot_node_path,
+                                    p_src: *const godot_node_path);
 }
 extern "C" {
-    pub fn godot_node_path_get_name(p_np: *const godot_node_path,
+    pub fn godot_node_path_destroy(p_self: *mut godot_node_path);
+}
+extern "C" {
+    pub fn godot_node_path_as_string(p_self: *const godot_node_path)
+     -> godot_string;
+}
+extern "C" {
+    pub fn godot_node_path_is_absolute(p_self: *const godot_node_path)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_node_path_get_name_count(p_self: *const godot_node_path)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_node_path_get_name(p_self: *const godot_node_path,
                                     p_idx: godot_int) -> godot_string;
 }
 extern "C" {
-    pub fn godot_node_path_get_name_count(p_np: *const godot_node_path)
+    pub fn godot_node_path_get_subname_count(p_self: *const godot_node_path)
      -> godot_int;
 }
 extern "C" {
-    pub fn godot_node_path_get_property(p_np: *const godot_node_path)
-     -> godot_string;
-}
-extern "C" {
-    pub fn godot_node_path_get_subname(p_np: *const godot_node_path,
+    pub fn godot_node_path_get_subname(p_self: *const godot_node_path,
                                        p_idx: godot_int) -> godot_string;
 }
 extern "C" {
-    pub fn godot_node_path_get_subname_count(p_np: *const godot_node_path)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_node_path_is_absolute(p_np: *const godot_node_path)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_node_path_is_empty(p_np: *const godot_node_path)
-     -> godot_bool;
-}
-extern "C" {
-    pub fn godot_node_path_as_string(p_np: *const godot_node_path)
+    pub fn godot_node_path_get_property(p_self: *const godot_node_path)
      -> godot_string;
 }
 extern "C" {
-    pub fn godot_node_path_destroy(p_np: *mut godot_node_path);
+    pub fn godot_node_path_is_empty(p_self: *const godot_node_path)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_node_path_operator_equal(p_self: *const godot_node_path,
+                                          p_b: *const godot_node_path)
+     -> godot_bool;
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct godot_plane {
+    pub _dont_touch_that: [u8; 16usize],
+}
+#[test]
+fn bindgen_test_layout_godot_plane() {
+    assert_eq!(::std::mem::size_of::<godot_plane>() , 16usize , concat ! (
+               "Size of: " , stringify ! ( godot_plane ) ));
+    assert_eq! (::std::mem::align_of::<godot_plane>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_plane ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_plane ) ) . _dont_touch_that as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_plane ) , "::" ,
+                stringify ! ( _dont_touch_that ) ));
+}
+impl Clone for godot_plane {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    pub fn godot_plane_new_with_reals(r_dest: *mut godot_plane,
+                                      p_a: godot_real, p_b: godot_real,
+                                      p_c: godot_real, p_d: godot_real);
+}
+extern "C" {
+    pub fn godot_plane_new_with_vectors(r_dest: *mut godot_plane,
+                                        p_v1: *const godot_vector3,
+                                        p_v2: *const godot_vector3,
+                                        p_v3: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_plane_new_with_normal(r_dest: *mut godot_plane,
+                                       p_normal: *const godot_vector3,
+                                       p_d: godot_real);
+}
+extern "C" {
+    pub fn godot_plane_as_string(p_self: *const godot_plane) -> godot_string;
+}
+extern "C" {
+    pub fn godot_plane_normalized(p_self: *const godot_plane) -> godot_plane;
+}
+extern "C" {
+    pub fn godot_plane_center(p_self: *const godot_plane) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_plane_get_any_point(p_self: *const godot_plane)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_plane_is_point_over(p_self: *const godot_plane,
+                                     p_point: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_distance_to(p_self: *const godot_plane,
+                                   p_point: *const godot_vector3)
+     -> godot_real;
+}
+extern "C" {
+    pub fn godot_plane_has_point(p_self: *const godot_plane,
+                                 p_point: *const godot_vector3,
+                                 p_epsilon: godot_real) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_project(p_self: *const godot_plane,
+                               p_point: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_plane_intersect_3(p_self: *const godot_plane,
+                                   r_dest: *mut godot_vector3,
+                                   p_b: *const godot_plane,
+                                   p_c: *const godot_plane) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_intersects_ray(p_self: *const godot_plane,
+                                      r_dest: *mut godot_vector3,
+                                      p_from: *const godot_vector3,
+                                      p_dir: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_intersects_segment(p_self: *const godot_plane,
+                                          r_dest: *mut godot_vector3,
+                                          p_begin: *const godot_vector3,
+                                          p_end: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_operator_neg(p_self: *const godot_plane)
+     -> godot_plane;
+}
+extern "C" {
+    pub fn godot_plane_operator_equal(p_self: *const godot_plane,
+                                      p_b: *const godot_plane) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_plane_set_normal(p_self: *mut godot_plane,
+                                  p_normal: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_plane_get_normal(p_self: *const godot_plane)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_plane_get_d(p_self: *const godot_plane) -> godot_real;
+}
+extern "C" {
+    pub fn godot_plane_set_d(p_self: *mut godot_plane, p_d: godot_real);
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct godot_rect3 {
+    pub _dont_touch_that: [u8; 24usize],
+}
+#[test]
+fn bindgen_test_layout_godot_rect3() {
+    assert_eq!(::std::mem::size_of::<godot_rect3>() , 24usize , concat ! (
+               "Size of: " , stringify ! ( godot_rect3 ) ));
+    assert_eq! (::std::mem::align_of::<godot_rect3>() , 1usize , concat ! (
+                "Alignment of " , stringify ! ( godot_rect3 ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_rect3 ) ) . _dont_touch_that as *
+                const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_rect3 ) , "::" ,
+                stringify ! ( _dont_touch_that ) ));
+}
+impl Clone for godot_rect3 {
+    fn clone(&self) -> Self { *self }
+}
+extern "C" {
+    pub fn godot_rect3_new(r_dest: *mut godot_rect3,
+                           p_pos: *const godot_vector3,
+                           p_size: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_rect3_get_position(p_self: *const godot_rect3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_set_position(p_self: *const godot_rect3,
+                                    p_v: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_rect3_get_size(p_self: *const godot_rect3) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_set_size(p_self: *const godot_rect3,
+                                p_v: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_rect3_as_string(p_self: *const godot_rect3) -> godot_string;
+}
+extern "C" {
+    pub fn godot_rect3_get_area(p_self: *const godot_rect3) -> godot_real;
+}
+extern "C" {
+    pub fn godot_rect3_has_no_area(p_self: *const godot_rect3) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_has_no_surface(p_self: *const godot_rect3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_intersects(p_self: *const godot_rect3,
+                                  p_with: *const godot_rect3) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_encloses(p_self: *const godot_rect3,
+                                p_with: *const godot_rect3) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_merge(p_self: *const godot_rect3,
+                             p_with: *const godot_rect3) -> godot_rect3;
+}
+extern "C" {
+    pub fn godot_rect3_intersection(p_self: *const godot_rect3,
+                                    p_with: *const godot_rect3)
+     -> godot_rect3;
+}
+extern "C" {
+    pub fn godot_rect3_intersects_plane(p_self: *const godot_rect3,
+                                        p_plane: *const godot_plane)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_intersects_segment(p_self: *const godot_rect3,
+                                          p_from: *const godot_vector3,
+                                          p_to: *const godot_vector3)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_has_point(p_self: *const godot_rect3,
+                                 p_point: *const godot_vector3) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rect3_get_support(p_self: *const godot_rect3,
+                                   p_dir: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_get_longest_axis(p_self: *const godot_rect3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_get_longest_axis_index(p_self: *const godot_rect3)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_rect3_get_longest_axis_size(p_self: *const godot_rect3)
+     -> godot_real;
+}
+extern "C" {
+    pub fn godot_rect3_get_shortest_axis(p_self: *const godot_rect3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_get_shortest_axis_index(p_self: *const godot_rect3)
+     -> godot_int;
+}
+extern "C" {
+    pub fn godot_rect3_get_shortest_axis_size(p_self: *const godot_rect3)
+     -> godot_real;
+}
+extern "C" {
+    pub fn godot_rect3_expand(p_self: *const godot_rect3,
+                              p_to_point: *const godot_vector3)
+     -> godot_rect3;
+}
+extern "C" {
+    pub fn godot_rect3_grow(p_self: *const godot_rect3, p_by: godot_real)
+     -> godot_rect3;
+}
+extern "C" {
+    pub fn godot_rect3_get_endpoint(p_self: *const godot_rect3,
+                                    p_idx: godot_int) -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_rect3_operator_equal(p_self: *const godot_rect3,
+                                      p_b: *const godot_rect3) -> godot_bool;
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -1999,948 +2921,517 @@ impl Clone for godot_rid {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_rid_new(p_rid: *mut godot_rid, p_from: *mut godot_object);
+    pub fn godot_rid_new(r_dest: *mut godot_rid);
 }
 extern "C" {
-    pub fn godot_rid_get_rid(p_rid: *const godot_rid) -> u32;
+    pub fn godot_rid_get_id(p_self: *const godot_rid) -> godot_int;
 }
 extern "C" {
-    pub fn godot_rid_destroy(p_rid: *mut godot_rid);
+    pub fn godot_rid_new_with_resource(r_dest: *mut godot_rid,
+                                       p_from: *const godot_object);
 }
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum godot_variant_type {
-    GODOT_VARIANT_TYPE_NIL = 0,
-    GODOT_VARIANT_TYPE_BOOL = 1,
-    GODOT_VARIANT_TYPE_INT = 2,
-    GODOT_VARIANT_TYPE_REAL = 3,
-    GODOT_VARIANT_TYPE_STRING = 4,
-    GODOT_VARIANT_TYPE_VECTOR2 = 5,
-    GODOT_VARIANT_TYPE_RECT2 = 6,
-    GODOT_VARIANT_TYPE_VECTOR3 = 7,
-    GODOT_VARIANT_TYPE_TRANSFORM2D = 8,
-    GODOT_VARIANT_TYPE_PLANE = 9,
-    GODOT_VARIANT_TYPE_QUAT = 10,
-    GODOT_VARIANT_TYPE_RECT3 = 11,
-    GODOT_VARIANT_TYPE_BASIS = 12,
-    GODOT_VARIANT_TYPE_TRANSFORM = 13,
-    GODOT_VARIANT_TYPE_COLOR = 14,
-    GODOT_VARIANT_TYPE_IMAGE = 15,
-    GODOT_VARIANT_TYPE_NODE_PATH = 16,
-    GODOT_VARIANT_TYPE_RID = 17,
-    GODOT_VARIANT_TYPE_OBJECT = 18,
-    GODOT_VARIANT_TYPE_INPUT_EVENT = 19,
-    GODOT_VARIANT_TYPE_DICTIONARY = 20,
-    GODOT_VARIANT_TYPE_ARRAY = 21,
-    GODOT_VARIANT_TYPE_POOL_BYTE_ARRAY = 22,
-    GODOT_VARIANT_TYPE_POOL_INT_ARRAY = 23,
-    GODOT_VARIANT_TYPE_POOL_REAL_ARRAY = 24,
-    GODOT_VARIANT_TYPE_POOL_STRING_ARRAY = 25,
-    GODOT_VARIANT_TYPE_POOL_VECTOR2_ARRAY = 26,
-    GODOT_VARIANT_TYPE_POOL_VECTOR3_ARRAY = 27,
-    GODOT_VARIANT_TYPE_POOL_COLOR_ARRAY = 28,
+extern "C" {
+    pub fn godot_rid_operator_equal(p_self: *const godot_rid,
+                                    p_b: *const godot_rid) -> godot_bool;
+}
+extern "C" {
+    pub fn godot_rid_operator_less(p_self: *const godot_rid,
+                                   p_b: *const godot_rid) -> godot_bool;
+}
+#[repr(C)]
+pub struct godot_transform {
+    pub _dont_touch_that: [u8; 48usize],
+}
+#[test]
+fn bindgen_test_layout_godot_transform() {
+    assert_eq!(::std::mem::size_of::<godot_transform>() , 48usize , concat ! (
+               "Size of: " , stringify ! ( godot_transform ) ));
+    assert_eq! (::std::mem::align_of::<godot_transform>() , 1usize , concat !
+                ( "Alignment of " , stringify ! ( godot_transform ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_transform ) ) . _dont_touch_that as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_transform ) ,
+                "::" , stringify ! ( _dont_touch_that ) ));
+}
+extern "C" {
+    pub fn godot_transform_new_with_axis_origin(r_dest: *mut godot_transform,
+                                                p_x_axis:
+                                                    *const godot_vector3,
+                                                p_y_axis:
+                                                    *const godot_vector3,
+                                                p_z_axis:
+                                                    *const godot_vector3,
+                                                p_origin:
+                                                    *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_transform_new(r_dest: *mut godot_transform,
+                               p_basis: *const godot_basis,
+                               p_origin: *const godot_vector3);
+}
+extern "C" {
+    pub fn godot_transform_get_basis(p_self: *const godot_transform)
+     -> godot_basis;
+}
+extern "C" {
+    pub fn godot_transform_set_basis(p_self: *mut godot_transform,
+                                     p_v: *mut godot_basis);
+}
+extern "C" {
+    pub fn godot_transform_get_origin(p_self: *const godot_transform)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_transform_set_origin(p_self: *mut godot_transform,
+                                      p_v: *mut godot_vector3);
+}
+extern "C" {
+    pub fn godot_transform_as_string(p_self: *const godot_transform)
+     -> godot_string;
+}
+extern "C" {
+    pub fn godot_transform_inverse(p_self: *const godot_transform)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_affine_inverse(p_self: *const godot_transform)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_orthonormalized(p_self: *const godot_transform)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_rotated(p_self: *const godot_transform,
+                                   p_axis: *const godot_vector3,
+                                   p_phi: godot_real) -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_scaled(p_self: *const godot_transform,
+                                  p_scale: *const godot_vector3)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_translated(p_self: *const godot_transform,
+                                      p_ofs: *const godot_vector3)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_looking_at(p_self: *const godot_transform,
+                                      p_target: *const godot_vector3,
+                                      p_up: *const godot_vector3)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_xform_plane(p_self: *const godot_transform,
+                                       p_v: *const godot_plane)
+     -> godot_plane;
+}
+extern "C" {
+    pub fn godot_transform_xform_inv_plane(p_self: *const godot_transform,
+                                           p_v: *const godot_plane)
+     -> godot_plane;
+}
+extern "C" {
+    pub fn godot_transform_new_identity(r_dest: *mut godot_transform);
+}
+extern "C" {
+    pub fn godot_transform_operator_equal(p_self: *const godot_transform,
+                                          p_b: *const godot_transform)
+     -> godot_bool;
+}
+extern "C" {
+    pub fn godot_transform_operator_multiply(p_self: *const godot_transform,
+                                             p_b: *const godot_transform)
+     -> godot_transform;
+}
+extern "C" {
+    pub fn godot_transform_xform_vector3(p_self: *const godot_transform,
+                                         p_v: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_transform_xform_inv_vector3(p_self: *const godot_transform,
+                                             p_v: *const godot_vector3)
+     -> godot_vector3;
+}
+extern "C" {
+    pub fn godot_transform_xform_rect3(p_self: *const godot_transform,
+                                       p_v: *const godot_rect3)
+     -> godot_rect3;
+}
+extern "C" {
+    pub fn godot_transform_xform_inv_rect3(p_self: *const godot_transform,
+                                           p_v: *const godot_rect3)
+     -> godot_rect3;
 }
 extern "C" {
     pub fn godot_variant_get_type(p_v: *const godot_variant)
      -> godot_variant_type;
 }
 extern "C" {
-    pub fn godot_variant_copy(p_dest: *mut godot_variant,
-                              p_src: *const godot_variant);
+    pub fn godot_variant_new_copy(r_dest: *mut godot_variant,
+                                  p_src: *const godot_variant);
 }
 extern "C" {
-    pub fn godot_variant_new_nil(p_v: *mut godot_variant);
+    pub fn godot_variant_new_nil(r_dest: *mut godot_variant);
 }
 extern "C" {
     pub fn godot_variant_new_bool(p_v: *mut godot_variant, p_b: godot_bool);
 }
 extern "C" {
-    pub fn godot_variant_new_uint(p_v: *mut godot_variant, p_i: u64);
+    pub fn godot_variant_new_uint(r_dest: *mut godot_variant, p_i: u64);
 }
 extern "C" {
-    pub fn godot_variant_new_int(p_v: *mut godot_variant, p_i: i64);
+    pub fn godot_variant_new_int(r_dest: *mut godot_variant, p_i: i64);
 }
 extern "C" {
-    pub fn godot_variant_new_real(p_v: *mut godot_variant, p_r: f64);
+    pub fn godot_variant_new_real(r_dest: *mut godot_variant, p_r: f64);
 }
 extern "C" {
-    pub fn godot_variant_new_string(p_v: *mut godot_variant,
+    pub fn godot_variant_new_string(r_dest: *mut godot_variant,
                                     p_s: *const godot_string);
 }
 extern "C" {
-    pub fn godot_variant_new_vector2(p_v: *mut godot_variant,
+    pub fn godot_variant_new_vector2(r_dest: *mut godot_variant,
                                      p_v2: *const godot_vector2);
 }
 extern "C" {
-    pub fn godot_variant_new_rect2(p_v: *mut godot_variant,
+    pub fn godot_variant_new_rect2(r_dest: *mut godot_variant,
                                    p_rect2: *const godot_rect2);
 }
 extern "C" {
-    pub fn godot_variant_new_vector3(p_v: *mut godot_variant,
+    pub fn godot_variant_new_vector3(r_dest: *mut godot_variant,
                                      p_v3: *const godot_vector3);
 }
 extern "C" {
-    pub fn godot_variant_new_transform2d(p_v: *mut godot_variant,
+    pub fn godot_variant_new_transform2d(r_dest: *mut godot_variant,
                                          p_t2d: *const godot_transform2d);
 }
 extern "C" {
-    pub fn godot_variant_new_plane(p_v: *mut godot_variant,
+    pub fn godot_variant_new_plane(r_dest: *mut godot_variant,
                                    p_plane: *const godot_plane);
 }
 extern "C" {
-    pub fn godot_variant_new_quat(p_v: *mut godot_variant,
+    pub fn godot_variant_new_quat(r_dest: *mut godot_variant,
                                   p_quat: *const godot_quat);
 }
 extern "C" {
-    pub fn godot_variant_new_rect3(p_v: *mut godot_variant,
+    pub fn godot_variant_new_rect3(r_dest: *mut godot_variant,
                                    p_rect3: *const godot_rect3);
 }
 extern "C" {
-    pub fn godot_variant_new_basis(p_v: *mut godot_variant,
+    pub fn godot_variant_new_basis(r_dest: *mut godot_variant,
                                    p_basis: *const godot_basis);
 }
 extern "C" {
-    pub fn godot_variant_new_transform(p_v: *mut godot_variant,
+    pub fn godot_variant_new_transform(r_dest: *mut godot_variant,
                                        p_trans: *const godot_transform);
 }
 extern "C" {
-    pub fn godot_variant_new_color(p_v: *mut godot_variant,
+    pub fn godot_variant_new_color(r_dest: *mut godot_variant,
                                    p_color: *const godot_color);
 }
 extern "C" {
-    pub fn godot_variant_new_image(p_v: *mut godot_variant,
-                                   p_img: *const godot_image);
-}
-extern "C" {
-    pub fn godot_variant_new_node_path(p_v: *mut godot_variant,
+    pub fn godot_variant_new_node_path(r_dest: *mut godot_variant,
                                        p_np: *const godot_node_path);
 }
 extern "C" {
-    pub fn godot_variant_new_rid(p_v: *mut godot_variant,
+    pub fn godot_variant_new_rid(r_dest: *mut godot_variant,
                                  p_rid: *const godot_rid);
 }
 extern "C" {
-    pub fn godot_variant_new_object(p_v: *mut godot_variant,
+    pub fn godot_variant_new_object(r_dest: *mut godot_variant,
                                     p_obj: *const godot_object);
 }
 extern "C" {
-    pub fn godot_variant_new_input_event(p_v: *mut godot_variant,
-                                         p_event: *const godot_input_event);
-}
-extern "C" {
-    pub fn godot_variant_new_dictionary(p_v: *mut godot_variant,
+    pub fn godot_variant_new_dictionary(r_dest: *mut godot_variant,
                                         p_dict: *const godot_dictionary);
 }
 extern "C" {
-    pub fn godot_variant_new_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_array(r_dest: *mut godot_variant,
                                    p_arr: *const godot_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_byte_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_byte_array(r_dest: *mut godot_variant,
                                              p_pba:
                                                  *const godot_pool_byte_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_int_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_int_array(r_dest: *mut godot_variant,
                                             p_pia:
                                                 *const godot_pool_int_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_real_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_real_array(r_dest: *mut godot_variant,
                                              p_pra:
                                                  *const godot_pool_real_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_string_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_string_array(r_dest: *mut godot_variant,
                                                p_psa:
                                                    *const godot_pool_string_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_vector2_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_vector2_array(r_dest: *mut godot_variant,
                                                 p_pv2a:
                                                     *const godot_pool_vector2_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_vector3_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_vector3_array(r_dest: *mut godot_variant,
                                                 p_pv3a:
                                                     *const godot_pool_vector3_array);
 }
 extern "C" {
-    pub fn godot_variant_new_pool_color_array(p_v: *mut godot_variant,
+    pub fn godot_variant_new_pool_color_array(r_dest: *mut godot_variant,
                                               p_pca:
                                                   *const godot_pool_color_array);
 }
 extern "C" {
-    pub fn godot_variant_as_bool(p_v: *const godot_variant) -> godot_bool;
+    pub fn godot_variant_as_bool(p_self: *const godot_variant) -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_as_uint(p_v: *const godot_variant) -> u64;
+    pub fn godot_variant_as_uint(p_self: *const godot_variant) -> u64;
 }
 extern "C" {
-    pub fn godot_variant_as_int(p_v: *const godot_variant) -> i64;
+    pub fn godot_variant_as_int(p_self: *const godot_variant) -> i64;
 }
 extern "C" {
-    pub fn godot_variant_as_real(p_v: *const godot_variant) -> f64;
+    pub fn godot_variant_as_real(p_self: *const godot_variant) -> f64;
 }
 extern "C" {
-    pub fn godot_variant_as_string(p_v: *const godot_variant) -> godot_string;
+    pub fn godot_variant_as_string(p_self: *const godot_variant)
+     -> godot_string;
 }
 extern "C" {
-    pub fn godot_variant_as_vector2(p_v: *const godot_variant)
+    pub fn godot_variant_as_vector2(p_self: *const godot_variant)
      -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_variant_as_rect2(p_v: *const godot_variant) -> godot_rect2;
+    pub fn godot_variant_as_rect2(p_self: *const godot_variant)
+     -> godot_rect2;
 }
 extern "C" {
-    pub fn godot_variant_as_vector3(p_v: *const godot_variant)
+    pub fn godot_variant_as_vector3(p_self: *const godot_variant)
      -> godot_vector3;
 }
 extern "C" {
-    pub fn godot_variant_as_transform2d(p_v: *const godot_variant)
+    pub fn godot_variant_as_transform2d(p_self: *const godot_variant)
      -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_variant_as_plane(p_v: *const godot_variant) -> godot_plane;
+    pub fn godot_variant_as_plane(p_self: *const godot_variant)
+     -> godot_plane;
 }
 extern "C" {
-    pub fn godot_variant_as_quat(p_v: *const godot_variant) -> godot_quat;
+    pub fn godot_variant_as_quat(p_self: *const godot_variant) -> godot_quat;
 }
 extern "C" {
-    pub fn godot_variant_as_rect3(p_v: *const godot_variant) -> godot_rect3;
+    pub fn godot_variant_as_rect3(p_self: *const godot_variant)
+     -> godot_rect3;
 }
 extern "C" {
-    pub fn godot_variant_as_basis(p_v: *const godot_variant) -> godot_basis;
+    pub fn godot_variant_as_basis(p_self: *const godot_variant)
+     -> godot_basis;
 }
 extern "C" {
-    pub fn godot_variant_as_transform(p_v: *const godot_variant)
+    pub fn godot_variant_as_transform(p_self: *const godot_variant)
      -> godot_transform;
 }
 extern "C" {
-    pub fn godot_variant_as_color(p_v: *const godot_variant) -> godot_color;
+    pub fn godot_variant_as_color(p_self: *const godot_variant)
+     -> godot_color;
 }
 extern "C" {
-    pub fn godot_variant_as_image(p_v: *const godot_variant) -> godot_image;
-}
-extern "C" {
-    pub fn godot_variant_as_node_path(p_v: *const godot_variant)
+    pub fn godot_variant_as_node_path(p_self: *const godot_variant)
      -> godot_node_path;
 }
 extern "C" {
-    pub fn godot_variant_as_rid(p_v: *const godot_variant) -> godot_rid;
+    pub fn godot_variant_as_rid(p_self: *const godot_variant) -> godot_rid;
 }
 extern "C" {
-    pub fn godot_variant_as_object(p_v: *const godot_variant)
+    pub fn godot_variant_as_object(p_self: *const godot_variant)
      -> *mut godot_object;
 }
 extern "C" {
-    pub fn godot_variant_as_input_event(p_v: *const godot_variant)
-     -> godot_input_event;
-}
-extern "C" {
-    pub fn godot_variant_as_dictionary(p_v: *const godot_variant)
+    pub fn godot_variant_as_dictionary(p_self: *const godot_variant)
      -> godot_dictionary;
 }
 extern "C" {
-    pub fn godot_variant_as_array(p_v: *const godot_variant) -> godot_array;
+    pub fn godot_variant_as_array(p_self: *const godot_variant)
+     -> godot_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_byte_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_byte_array(p_self: *const godot_variant)
      -> godot_pool_byte_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_int_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_int_array(p_self: *const godot_variant)
      -> godot_pool_int_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_real_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_real_array(p_self: *const godot_variant)
      -> godot_pool_real_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_string_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_string_array(p_self: *const godot_variant)
      -> godot_pool_string_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_vector2_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_vector2_array(p_self: *const godot_variant)
      -> godot_pool_vector2_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_vector3_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_vector3_array(p_self: *const godot_variant)
      -> godot_pool_vector3_array;
 }
 extern "C" {
-    pub fn godot_variant_as_pool_color_array(p_v: *const godot_variant)
+    pub fn godot_variant_as_pool_color_array(p_self: *const godot_variant)
      -> godot_pool_color_array;
 }
 extern "C" {
-    pub fn godot_variant_call(p_v: *mut godot_variant,
+    pub fn godot_variant_call(p_self: *mut godot_variant,
                               p_method: *const godot_string,
                               p_args: *mut *const godot_variant,
-                              p_argcount: godot_int) -> godot_variant;
+                              p_argcount: godot_int,
+                              r_error: *mut godot_variant_call_error)
+     -> godot_variant;
 }
 extern "C" {
-    pub fn godot_variant_has_method(p_v: *mut godot_variant,
+    pub fn godot_variant_has_method(p_self: *const godot_variant,
                                     p_method: *const godot_string)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_operator_equal(p_a: *const godot_variant,
-                                        p_b: *const godot_variant)
+    pub fn godot_variant_operator_equal(p_self: *const godot_variant,
+                                        p_other: *const godot_variant)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_operator_less(p_a: *const godot_variant,
-                                       p_b: *const godot_variant)
+    pub fn godot_variant_operator_less(p_self: *const godot_variant,
+                                       p_other: *const godot_variant)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_hash_compare(p_a: *const godot_variant,
-                                      p_b: *const godot_variant)
+    pub fn godot_variant_hash_compare(p_self: *const godot_variant,
+                                      p_other: *const godot_variant)
      -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_booleanize(p_v: *const godot_variant,
-                                    p_valid: *mut godot_bool) -> godot_bool;
+    pub fn godot_variant_booleanize(p_self: *const godot_variant,
+                                    r_valid: *mut godot_bool) -> godot_bool;
 }
 extern "C" {
-    pub fn godot_variant_destroy(p_v: *mut godot_variant);
+    pub fn godot_variant_destroy(p_self: *mut godot_variant);
 }
 extern "C" {
-    pub fn godot_array_new(p_arr: *mut godot_array);
+    pub fn godot_transform2d_new(r_dest: *mut godot_transform2d,
+                                 p_rot: godot_real,
+                                 p_pos: *const godot_vector2);
 }
 extern "C" {
-    pub fn godot_array_new_pool_color_array(p_arr: *mut godot_array,
-                                            p_pca:
-                                                *const godot_pool_color_array);
+    pub fn godot_transform2d_new_axis_origin(r_dest: *mut godot_transform2d,
+                                             p_x_axis: *const godot_vector2,
+                                             p_y_axis: *const godot_vector2,
+                                             p_origin: *const godot_vector2);
 }
 extern "C" {
-    pub fn godot_array_new_pool_vector3_array(p_arr: *mut godot_array,
-                                              p_pv3a:
-                                                  *const godot_pool_vector3_array);
+    pub fn godot_transform2d_as_string(p_self: *const godot_transform2d)
+     -> godot_string;
 }
 extern "C" {
-    pub fn godot_array_new_pool_vector2_array(p_arr: *mut godot_array,
-                                              p_pv2a:
-                                                  *const godot_pool_vector2_array);
+    pub fn godot_transform2d_inverse(p_self: *const godot_transform2d)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_new_pool_string_array(p_arr: *mut godot_array,
-                                             p_psa:
-                                                 *const godot_pool_string_array);
+    pub fn godot_transform2d_affine_inverse(p_self: *const godot_transform2d)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_new_pool_real_array(p_arr: *mut godot_array,
-                                           p_pra:
-                                               *const godot_pool_real_array);
+    pub fn godot_transform2d_get_rotation(p_self: *const godot_transform2d)
+     -> godot_real;
 }
 extern "C" {
-    pub fn godot_array_new_pool_int_array(p_arr: *mut godot_array,
-                                          p_pia: *const godot_pool_int_array);
+    pub fn godot_transform2d_get_origin(p_self: *const godot_transform2d)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_new_pool_byte_array(p_arr: *mut godot_array,
-                                           p_pba:
-                                               *const godot_pool_byte_array);
+    pub fn godot_transform2d_get_scale(p_self: *const godot_transform2d)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_set(p_arr: *mut godot_array, p_idx: godot_int,
-                           p_value: *const godot_variant);
+    pub fn godot_transform2d_orthonormalized(p_self: *const godot_transform2d)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_get(p_arr: *mut godot_array, p_idx: godot_int)
-     -> *mut godot_variant;
+    pub fn godot_transform2d_rotated(p_self: *const godot_transform2d,
+                                     p_phi: godot_real) -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_append(p_arr: *mut godot_array,
-                              p_value: *const godot_variant);
+    pub fn godot_transform2d_scaled(p_self: *const godot_transform2d,
+                                    p_scale: *const godot_vector2)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_clear(p_arr: *mut godot_array);
+    pub fn godot_transform2d_translated(p_self: *const godot_transform2d,
+                                        p_offset: *const godot_vector2)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_count(p_arr: *mut godot_array,
-                             p_value: *const godot_variant) -> godot_int;
+    pub fn godot_transform2d_xform_vector2(p_self: *const godot_transform2d,
+                                           p_v: *const godot_vector2)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_empty(p_arr: *const godot_array) -> godot_bool;
+    pub fn godot_transform2d_xform_inv_vector2(p_self:
+                                                   *const godot_transform2d,
+                                               p_v: *const godot_vector2)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_erase(p_arr: *mut godot_array,
-                             p_value: *const godot_variant);
+    pub fn godot_transform2d_basis_xform_vector2(p_self:
+                                                     *const godot_transform2d,
+                                                 p_v: *const godot_vector2)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_front(p_arr: *const godot_array) -> godot_variant;
+    pub fn godot_transform2d_basis_xform_inv_vector2(p_self:
+                                                         *const godot_transform2d,
+                                                     p_v:
+                                                         *const godot_vector2)
+     -> godot_vector2;
 }
 extern "C" {
-    pub fn godot_array_back(p_arr: *const godot_array) -> godot_variant;
+    pub fn godot_transform2d_interpolate_with(p_self:
+                                                  *const godot_transform2d,
+                                              p_m: *const godot_transform2d,
+                                              p_c: godot_real)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_find(p_arr: *const godot_array,
-                            p_what: *const godot_variant, p_from: godot_int)
-     -> godot_int;
+    pub fn godot_transform2d_operator_equal(p_self: *const godot_transform2d,
+                                            p_b: *const godot_transform2d)
+     -> godot_bool;
 }
 extern "C" {
-    pub fn godot_array_find_last(p_arr: *const godot_array,
-                                 p_what: *const godot_variant) -> godot_int;
+    pub fn godot_transform2d_operator_multiply(p_self:
+                                                   *const godot_transform2d,
+                                               p_b: *const godot_transform2d)
+     -> godot_transform2d;
 }
 extern "C" {
-    pub fn godot_array_has(p_arr: *const godot_array,
-                           p_value: *const godot_variant) -> godot_bool;
+    pub fn godot_transform2d_new_identity(r_dest: *mut godot_transform2d);
 }
 extern "C" {
-    pub fn godot_array_hash(p_arr: *const godot_array) -> u32;
+    pub fn godot_transform2d_xform_rect2(p_self: *const godot_transform2d,
+                                         p_v: *const godot_rect2)
+     -> godot_rect2;
 }
 extern "C" {
-    pub fn godot_array_insert(p_arr: *mut godot_array, p_pos: godot_int,
-                              p_value: *const godot_variant);
-}
-extern "C" {
-    pub fn godot_array_invert(p_arr: *mut godot_array);
-}
-extern "C" {
-    pub fn godot_array_is_shared(p_arr: *const godot_array) -> godot_bool;
-}
-extern "C" {
-    pub fn godot_array_pop_back(p_arr: *mut godot_array) -> godot_variant;
-}
-extern "C" {
-    pub fn godot_array_pop_front(p_arr: *mut godot_array) -> godot_variant;
-}
-extern "C" {
-    pub fn godot_array_push_back(p_arr: *mut godot_array,
-                                 p_value: *const godot_variant);
-}
-extern "C" {
-    pub fn godot_array_push_front(p_arr: *mut godot_array,
-                                  p_value: *const godot_variant);
-}
-extern "C" {
-    pub fn godot_array_remove(p_arr: *mut godot_array, p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_array_resize(p_arr: *mut godot_array, p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_array_rfind(p_arr: *const godot_array,
-                             p_what: *const godot_variant, p_from: godot_int)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_array_size(p_arr: *const godot_array) -> godot_int;
-}
-extern "C" {
-    pub fn godot_array_sort(p_arr: *mut godot_array);
-}
-extern "C" {
-    pub fn godot_array_sort_custom(p_arr: *mut godot_array,
-                                   p_obj: *mut godot_object,
-                                   p_func: *const godot_string);
-}
-extern "C" {
-    pub fn godot_array_destroy(p_arr: *mut godot_array);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_new(p_pba: *mut godot_pool_byte_array);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_new_with_array(p_pba:
-                                                    *mut godot_pool_byte_array,
-                                                p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_append(p_pba: *mut godot_pool_byte_array,
-                                        p_data: u8);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_append_array(p_pba:
-                                                  *mut godot_pool_byte_array,
-                                              p_array:
-                                                  *const godot_pool_byte_array);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_insert(p_pba: *mut godot_pool_byte_array,
-                                        p_idx: godot_int, p_data: u8)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_byte_array_invert(p_pba: *mut godot_pool_byte_array);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_push_back(p_pba: *mut godot_pool_byte_array,
-                                           p_data: u8);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_remove(p_pba: *mut godot_pool_byte_array,
-                                        p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_resize(p_pba: *mut godot_pool_byte_array,
-                                        p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_set(p_pba: *mut godot_pool_byte_array,
-                                     p_idx: godot_int, p_data: u8);
-}
-extern "C" {
-    pub fn godot_pool_byte_array_get(p_pba: *mut godot_pool_byte_array,
-                                     p_idx: godot_int) -> u8;
-}
-extern "C" {
-    pub fn godot_pool_byte_array_size(p_pba: *mut godot_pool_byte_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_byte_array_destroy(p_pba: *mut godot_pool_byte_array);
-}
-extern "C" {
-    pub fn godot_pool_int_array_new(p_pia: *mut godot_pool_int_array);
-}
-extern "C" {
-    pub fn godot_pool_int_array_new_with_array(p_pia:
-                                                   *mut godot_pool_int_array,
-                                               p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_int_array_append(p_pia: *mut godot_pool_int_array,
-                                       p_data: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_int_array_append_array(p_pia: *mut godot_pool_int_array,
-                                             p_array:
-                                                 *const godot_pool_int_array);
-}
-extern "C" {
-    pub fn godot_pool_int_array_insert(p_pia: *mut godot_pool_int_array,
-                                       p_idx: godot_int, p_data: godot_int)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_int_array_invert(p_pia: *mut godot_pool_int_array);
-}
-extern "C" {
-    pub fn godot_pool_int_array_push_back(p_pia: *mut godot_pool_int_array,
-                                          p_data: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_int_array_remove(p_pia: *mut godot_pool_int_array,
-                                       p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_int_array_resize(p_pia: *mut godot_pool_int_array,
-                                       p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_int_array_set(p_pia: *mut godot_pool_int_array,
-                                    p_idx: godot_int, p_data: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_int_array_get(p_pia: *mut godot_pool_int_array,
-                                    p_idx: godot_int) -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_int_array_size(p_pia: *mut godot_pool_int_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_int_array_destroy(p_pia: *mut godot_pool_int_array);
-}
-extern "C" {
-    pub fn godot_pool_real_array_new(p_pra: *mut godot_pool_real_array);
-}
-extern "C" {
-    pub fn godot_pool_real_array_new_with_array(p_pra:
-                                                    *mut godot_pool_real_array,
-                                                p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_real_array_append(p_pra: *mut godot_pool_real_array,
-                                        p_data: godot_real);
-}
-extern "C" {
-    pub fn godot_pool_real_array_append_array(p_pra:
-                                                  *mut godot_pool_real_array,
-                                              p_array:
-                                                  *const godot_pool_real_array);
-}
-extern "C" {
-    pub fn godot_pool_real_array_insert(p_pra: *mut godot_pool_real_array,
-                                        p_idx: godot_int, p_data: godot_real)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_real_array_invert(p_pra: *mut godot_pool_real_array);
-}
-extern "C" {
-    pub fn godot_pool_real_array_push_back(p_pra: *mut godot_pool_real_array,
-                                           p_data: godot_real);
-}
-extern "C" {
-    pub fn godot_pool_real_array_remove(p_pra: *mut godot_pool_real_array,
-                                        p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_real_array_resize(p_pra: *mut godot_pool_real_array,
-                                        p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_real_array_set(p_pra: *mut godot_pool_real_array,
-                                     p_idx: godot_int, p_data: godot_real);
-}
-extern "C" {
-    pub fn godot_pool_real_array_get(p_pra: *mut godot_pool_real_array,
-                                     p_idx: godot_int) -> godot_real;
-}
-extern "C" {
-    pub fn godot_pool_real_array_size(p_pra: *mut godot_pool_real_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_real_array_destroy(p_pra: *mut godot_pool_real_array);
-}
-extern "C" {
-    pub fn godot_pool_string_array_new(p_psa: *mut godot_pool_string_array);
-}
-extern "C" {
-    pub fn godot_pool_string_array_new_with_array(p_psa:
-                                                      *mut godot_pool_string_array,
-                                                  p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_string_array_append(p_psa: *mut godot_pool_string_array,
-                                          p_data: *const godot_string);
-}
-extern "C" {
-    pub fn godot_pool_string_array_append_array(p_psa:
-                                                    *mut godot_pool_string_array,
-                                                p_array:
-                                                    *const godot_pool_string_array);
-}
-extern "C" {
-    pub fn godot_pool_string_array_insert(p_psa: *mut godot_pool_string_array,
-                                          p_idx: godot_int,
-                                          p_data: *const godot_string)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_string_array_invert(p_psa:
-                                              *mut godot_pool_string_array);
-}
-extern "C" {
-    pub fn godot_pool_string_array_push_back(p_psa:
-                                                 *mut godot_pool_string_array,
-                                             p_data: *const godot_string);
-}
-extern "C" {
-    pub fn godot_pool_string_array_remove(p_psa: *mut godot_pool_string_array,
-                                          p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_string_array_resize(p_psa: *mut godot_pool_string_array,
-                                          p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_string_array_set(p_psa: *mut godot_pool_string_array,
-                                       p_idx: godot_int,
-                                       p_data: *const godot_string);
-}
-extern "C" {
-    pub fn godot_pool_string_array_get(p_psa: *mut godot_pool_string_array,
-                                       p_idx: godot_int) -> godot_string;
-}
-extern "C" {
-    pub fn godot_pool_string_array_size(p_psa: *mut godot_pool_string_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_string_array_destroy(p_psa:
-                                               *mut godot_pool_string_array);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_new(p_pv2a:
-                                            *mut godot_pool_vector2_array);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_new_with_array(p_pv2a:
-                                                       *mut godot_pool_vector2_array,
-                                                   p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_append(p_pv2a:
-                                               *mut godot_pool_vector2_array,
-                                           p_data: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_append_array(p_pv2a:
-                                                     *mut godot_pool_vector2_array,
-                                                 p_array:
-                                                     *const godot_pool_vector2_array);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_insert(p_pv2a:
-                                               *mut godot_pool_vector2_array,
-                                           p_idx: godot_int,
-                                           p_data: *const godot_vector2)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_invert(p_pv2a:
-                                               *mut godot_pool_vector2_array);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_push_back(p_pv2a:
-                                                  *mut godot_pool_vector2_array,
-                                              p_data: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_remove(p_pv2a:
-                                               *mut godot_pool_vector2_array,
-                                           p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_resize(p_pv2a:
-                                               *mut godot_pool_vector2_array,
-                                           p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_set(p_pv2a: *mut godot_pool_vector2_array,
-                                        p_idx: godot_int,
-                                        p_data: *const godot_vector2);
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_get(p_pv2a: *mut godot_pool_vector2_array,
-                                        p_idx: godot_int) -> godot_vector2;
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_size(p_pv2a:
-                                             *mut godot_pool_vector2_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_vector2_array_destroy(p_pv2a:
-                                                *mut godot_pool_vector2_array);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_new(p_pv3a:
-                                            *mut godot_pool_vector3_array);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_new_with_array(p_pv3a:
-                                                       *mut godot_pool_vector3_array,
-                                                   p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_append(p_pv3a:
-                                               *mut godot_pool_vector3_array,
-                                           p_data: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_append_array(p_pv3a:
-                                                     *mut godot_pool_vector3_array,
-                                                 p_array:
-                                                     *const godot_pool_vector3_array);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_insert(p_pv3a:
-                                               *mut godot_pool_vector3_array,
-                                           p_idx: godot_int,
-                                           p_data: *const godot_vector3)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_invert(p_pv3a:
-                                               *mut godot_pool_vector3_array);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_push_back(p_pv3a:
-                                                  *mut godot_pool_vector3_array,
-                                              p_data: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_remove(p_pv3a:
-                                               *mut godot_pool_vector3_array,
-                                           p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_resize(p_pv3a:
-                                               *mut godot_pool_vector3_array,
-                                           p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_set(p_pv3a: *mut godot_pool_vector3_array,
-                                        p_idx: godot_int,
-                                        p_data: *const godot_vector3);
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_get(p_pv3a: *mut godot_pool_vector3_array,
-                                        p_idx: godot_int) -> godot_vector3;
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_size(p_pv3a:
-                                             *mut godot_pool_vector3_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_vector3_array_destroy(p_pv3a:
-                                                *mut godot_pool_vector3_array);
-}
-extern "C" {
-    pub fn godot_pool_color_array_new(p_pca: *mut godot_pool_color_array);
-}
-extern "C" {
-    pub fn godot_pool_color_array_new_with_array(p_pca:
-                                                     *mut godot_pool_color_array,
-                                                 p_a: *const godot_array);
-}
-extern "C" {
-    pub fn godot_pool_color_array_append(p_pca: *mut godot_pool_color_array,
-                                         p_data: *const godot_color);
-}
-extern "C" {
-    pub fn godot_pool_color_array_append_array(p_pca:
-                                                   *mut godot_pool_color_array,
-                                               p_array:
-                                                   *const godot_pool_color_array);
-}
-extern "C" {
-    pub fn godot_pool_color_array_insert(p_pca: *mut godot_pool_color_array,
-                                         p_idx: godot_int,
-                                         p_data: *const godot_color)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_pool_color_array_invert(p_pca: *mut godot_pool_color_array);
-}
-extern "C" {
-    pub fn godot_pool_color_array_push_back(p_pca:
-                                                *mut godot_pool_color_array,
-                                            p_data: *const godot_color);
-}
-extern "C" {
-    pub fn godot_pool_color_array_remove(p_pca: *mut godot_pool_color_array,
-                                         p_idx: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_color_array_resize(p_pca: *mut godot_pool_color_array,
-                                         p_size: godot_int);
-}
-extern "C" {
-    pub fn godot_pool_color_array_set(p_pca: *mut godot_pool_color_array,
-                                      p_idx: godot_int,
-                                      p_data: *const godot_color);
-}
-extern "C" {
-    pub fn godot_pool_color_array_get(p_pca: *mut godot_pool_color_array,
-                                      p_idx: godot_int) -> godot_color;
-}
-extern "C" {
-    pub fn godot_pool_color_array_size(p_pca: *mut godot_pool_color_array)
-     -> godot_int;
-}
-extern "C" {
-    pub fn godot_pool_color_array_destroy(p_pca: *mut godot_pool_color_array);
-}
-#[repr(u32)]
-#[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
-pub enum godot_image_format {
-    GODOT_IMAGE_FORMAT_L8 = 0,
-    GODOT_IMAGE_FORMAT_LA8 = 1,
-    GODOT_IMAGE_FORMAT_R8 = 2,
-    GODOT_IMAGE_FORMAT_RG8 = 3,
-    GODOT_IMAGE_FORMAT_RGB8 = 4,
-    GODOT_IMAGE_FORMAT_RGBA8 = 5,
-    GODOT_IMAGE_FORMAT_RGB565 = 6,
-    GODOT_IMAGE_FORMAT_RGBA4444 = 7,
-    GODOT_IMAGE_FORMAT_RGBA5551 = 8,
-    GODOT_IMAGE_FORMAT_RF = 9,
-    GODOT_IMAGE_FORMAT_RGF = 10,
-    GODOT_IMAGE_FORMAT_RGBF = 11,
-    GODOT_IMAGE_FORMAT_RGBAF = 12,
-    GODOT_IMAGE_FORMAT_RH = 13,
-    GODOT_IMAGE_FORMAT_RGH = 14,
-    GODOT_IMAGE_FORMAT_RGBH = 15,
-    GODOT_IMAGE_FORMAT_RGBAH = 16,
-    GODOT_IMAGE_FORMAT_DXT1 = 17,
-    GODOT_IMAGE_FORMAT_DXT3 = 18,
-    GODOT_IMAGE_FORMAT_DXT5 = 19,
-    GODOT_IMAGE_FORMAT_ATI1 = 20,
-    GODOT_IMAGE_FORMAT_ATI2 = 21,
-    GODOT_IMAGE_FORMAT_BPTC_RGBA = 22,
-    GODOT_IMAGE_FORMAT_BPTC_RGBF = 23,
-    GODOT_IMAGE_FORMAT_BPTC_RGBFU = 24,
-    GODOT_IMAGE_FORMAT_PVRTC2 = 25,
-    GODOT_IMAGE_FORMAT_PVRTC2A = 26,
-    GODOT_IMAGE_FORMAT_PVRTC4 = 27,
-    GODOT_IMAGE_FORMAT_PVRTC4A = 28,
-    GODOT_IMAGE_FORMAT_ETC = 29,
-    GODOT_IMAGE_FORMAT_ETC2_R11 = 30,
-    GODOT_IMAGE_FORMAT_ETC2_R11S = 31,
-    GODOT_IMAGE_FORMAT_ETC2_RG11 = 32,
-    GODOT_IMAGE_FORMAT_ETC2_RG11S = 33,
-    GODOT_IMAGE_FORMAT_ETC2_RGB8 = 34,
-    GODOT_IMAGE_FORMAT_ETC2_RGBA8 = 35,
-    GODOT_IMAGE_FORMAT_ETC2_RGB8A1 = 36,
-    GODOT_IMAGE_FORMAT_MAX = 37,
-}
-extern "C" {
-    pub fn godot_image_new(p_img: *mut godot_image);
-}
-extern "C" {
-    pub fn godot_image_new_with_png_jpg(p_img: *mut godot_image,
-                                        p_mem_png_jpg: *const u8,
-                                        p_len: ::std::os::raw::c_int);
-}
-extern "C" {
-    pub fn godot_image_new_with_xpm(p_img: *mut godot_image,
-                                    p_xpm:
-                                        *mut *const ::std::os::raw::c_char);
-}
-extern "C" {
-    pub fn godot_image_new_with_size_format(p_img: *mut godot_image,
-                                            p_width: ::std::os::raw::c_int,
-                                            p_height: ::std::os::raw::c_int,
-                                            p_use_mipmaps: bool,
-                                            p_format: godot_image_format);
-}
-extern "C" {
-    pub fn godot_image_new_with_size_format_data(p_img: *mut godot_image,
-                                                 p_width:
-                                                     ::std::os::raw::c_int,
-                                                 p_height:
-                                                     ::std::os::raw::c_int,
-                                                 p_use_mipmaps: bool,
-                                                 p_format: godot_image_format,
-                                                 p_data:
-                                                     *mut godot_pool_byte_array);
-}
-extern "C" {
-    pub fn godot_image_get_data(p_img: *mut godot_image)
-     -> godot_pool_byte_array;
-}
-extern "C" {
-    pub fn godot_image_load(p_img: *mut godot_image,
-                            p_path: *const godot_string) -> godot_error;
-}
-extern "C" {
-    pub fn godot_image_save_png(p_img: *mut godot_image,
-                                p_path: *const godot_string) -> godot_error;
-}
-extern "C" {
-    pub fn godot_image_get_width(p_img: *const godot_image)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_image_get_height(p_img: *const godot_image)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_image_has_mipmaps(p_img: *const godot_image) -> godot_bool;
-}
-extern "C" {
-    pub fn godot_image_get_mipmap_count(p_img: *const godot_image)
-     -> ::std::os::raw::c_int;
-}
-extern "C" {
-    pub fn godot_image_destroy(p_img: *mut godot_image);
+    pub fn godot_transform2d_xform_inv_rect2(p_self: *const godot_transform2d,
+                                             p_v: *const godot_rect2)
+     -> godot_rect2;
 }
 extern "C" {
     pub fn godot_object_destroy(p_o: *mut godot_object);
@@ -2985,76 +3476,134 @@ extern "C" {
                                          *mut *const ::std::os::raw::c_void,
                                      p_ret: *mut ::std::os::raw::c_void);
 }
+extern "C" {
+    pub fn godot_method_bind_call(p_method_bind: *mut godot_method_bind,
+                                  p_instance: *mut godot_object,
+                                  p_args: *mut *const godot_variant,
+                                  p_arg_count: ::std::os::raw::c_int,
+                                  p_call_error: *mut godot_variant_call_error)
+     -> godot_variant;
+}
 ////// Script API
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct godot_native_init_options {
+pub struct godot_gdnative_init_options {
     pub in_editor: godot_bool,
     pub core_api_hash: u64,
     pub editor_api_hash: u64,
     pub no_api_hash: u64,
 }
 #[test]
-fn bindgen_test_layout_godot_native_init_options() {
-    assert_eq!(::std::mem::size_of::<godot_native_init_options>() , 32usize ,
-               concat ! (
-               "Size of: " , stringify ! ( godot_native_init_options ) ));
-    assert_eq! (::std::mem::align_of::<godot_native_init_options>() , 8usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( godot_native_init_options )
+fn bindgen_test_layout_godot_gdnative_init_options() {
+    assert_eq!(::std::mem::size_of::<godot_gdnative_init_options>() , 32usize
+               , concat ! (
+               "Size of: " , stringify ! ( godot_gdnative_init_options ) ));
+    assert_eq! (::std::mem::align_of::<godot_gdnative_init_options>() , 8usize
+                , concat ! (
+                "Alignment of " , stringify ! ( godot_gdnative_init_options )
                 ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_native_init_options ) ) . in_editor
-                as * const _ as usize } , 0usize , concat ! (
+                & ( * ( 0 as * const godot_gdnative_init_options ) ) .
+                in_editor as * const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                godot_native_init_options ) , "::" , stringify ! ( in_editor )
-                ));
+                godot_gdnative_init_options ) , "::" , stringify ! ( in_editor
+                ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_native_init_options ) ) .
+                & ( * ( 0 as * const godot_gdnative_init_options ) ) .
                 core_api_hash as * const _ as usize } , 8usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                godot_native_init_options ) , "::" , stringify ! (
+                godot_gdnative_init_options ) , "::" , stringify ! (
                 core_api_hash ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_native_init_options ) ) .
+                & ( * ( 0 as * const godot_gdnative_init_options ) ) .
                 editor_api_hash as * const _ as usize } , 16usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                godot_native_init_options ) , "::" , stringify ! (
+                godot_gdnative_init_options ) , "::" , stringify ! (
                 editor_api_hash ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_native_init_options ) ) .
+                & ( * ( 0 as * const godot_gdnative_init_options ) ) .
                 no_api_hash as * const _ as usize } , 24usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                godot_native_init_options ) , "::" , stringify ! ( no_api_hash
-                ) ));
+                godot_gdnative_init_options ) , "::" , stringify ! (
+                no_api_hash ) ));
 }
-impl Clone for godot_native_init_options {
+impl Clone for godot_gdnative_init_options {
     fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
-pub struct godot_native_terminate_options {
+pub struct godot_gdnative_terminate_options {
     pub in_editor: godot_bool,
 }
 #[test]
-fn bindgen_test_layout_godot_native_terminate_options() {
-    assert_eq!(::std::mem::size_of::<godot_native_terminate_options>() ,
+fn bindgen_test_layout_godot_gdnative_terminate_options() {
+    assert_eq!(::std::mem::size_of::<godot_gdnative_terminate_options>() ,
                1usize , concat ! (
-               "Size of: " , stringify ! ( godot_native_terminate_options )
+               "Size of: " , stringify ! ( godot_gdnative_terminate_options )
                ));
-    assert_eq! (::std::mem::align_of::<godot_native_terminate_options>() ,
+    assert_eq! (::std::mem::align_of::<godot_gdnative_terminate_options>() ,
                 1usize , concat ! (
-                "Alignment of " , stringify ! ( godot_native_terminate_options
-                ) ));
+                "Alignment of " , stringify ! (
+                godot_gdnative_terminate_options ) ));
     assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_native_terminate_options ) ) .
+                & ( * ( 0 as * const godot_gdnative_terminate_options ) ) .
                 in_editor as * const _ as usize } , 0usize , concat ! (
                 "Alignment of field: " , stringify ! (
-                godot_native_terminate_options ) , "::" , stringify ! (
+                godot_gdnative_terminate_options ) , "::" , stringify ! (
                 in_editor ) ));
 }
-impl Clone for godot_native_terminate_options {
+impl Clone for godot_gdnative_terminate_options {
     fn clone(&self) -> Self { *self }
+}
+pub type godot_class_constructor =
+    ::std::option::Option<unsafe extern "C" fn() -> *mut godot_object>;
+extern "C" {
+    pub fn godot_get_class_constructor(p_classname:
+                                           *const ::std::os::raw::c_char)
+     -> godot_class_constructor;
+}
+extern "C" {
+    pub fn godot_get_global_constants() -> godot_dictionary;
+}
+////// GDNative procedure types
+pub type godot_gdnative_init_fn =
+    ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                   *mut godot_gdnative_init_options)>;
+pub type godot_gdnative_terminate_fn =
+    ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                   *mut godot_gdnative_terminate_options)>;
+pub type godot_gdnative_procedure_fn =
+    ::std::option::Option<unsafe extern "C" fn(arg1:
+                                                   *mut ::std::os::raw::c_void,
+                                               arg2: *mut godot_array)
+                              -> godot_variant>;
+extern "C" {
+    ////// System Functions
+    pub fn godot_alloc(p_bytes: ::std::os::raw::c_int)
+     -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn godot_realloc(p_ptr: *mut ::std::os::raw::c_void,
+                         p_bytes: ::std::os::raw::c_int)
+     -> *mut ::std::os::raw::c_void;
+}
+extern "C" {
+    pub fn godot_free(p_ptr: *mut ::std::os::raw::c_void);
+}
+extern "C" {
+    pub fn godot_print_error(p_description: *const ::std::os::raw::c_char,
+                             p_function: *const ::std::os::raw::c_char,
+                             p_file: *const ::std::os::raw::c_char,
+                             p_line: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn godot_print_warning(p_description: *const ::std::os::raw::c_char,
+                               p_function: *const ::std::os::raw::c_char,
+                               p_file: *const ::std::os::raw::c_char,
+                               p_line: ::std::os::raw::c_int);
+}
+extern "C" {
+    pub fn godot_print(p_message: *const godot_string);
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -3064,28 +3613,6 @@ pub enum godot_method_rpc_mode {
     GODOT_METHOD_RPC_MODE_SYNC = 2,
     GODOT_METHOD_RPC_MODE_MASTER = 3,
     GODOT_METHOD_RPC_MODE_SLAVE = 4,
-}
-#[repr(C)]
-#[derive(Debug, Copy)]
-pub struct godot_method_attributes {
-    pub rpc_type: godot_method_rpc_mode,
-}
-#[test]
-fn bindgen_test_layout_godot_method_attributes() {
-    assert_eq!(::std::mem::size_of::<godot_method_attributes>() , 4usize ,
-               concat ! (
-               "Size of: " , stringify ! ( godot_method_attributes ) ));
-    assert_eq! (::std::mem::align_of::<godot_method_attributes>() , 4usize ,
-                concat ! (
-                "Alignment of " , stringify ! ( godot_method_attributes ) ));
-    assert_eq! (unsafe {
-                & ( * ( 0 as * const godot_method_attributes ) ) . rpc_type as
-                * const _ as usize } , 0usize , concat ! (
-                "Alignment of field: " , stringify ! ( godot_method_attributes
-                ) , "::" , stringify ! ( rpc_type ) ));
-}
-impl Clone for godot_method_attributes {
-    fn clone(&self) -> Self { *self }
 }
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -3294,22 +3821,50 @@ impl Clone for godot_instance_destroy_func {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_script_register_class(p_name: *const ::std::os::raw::c_char,
-                                       p_base: *const ::std::os::raw::c_char,
-                                       p_create_func:
-                                           godot_instance_create_func,
-                                       p_destroy_func:
-                                           godot_instance_destroy_func);
+    pub fn godot_nativescript_register_class(p_gdnative_handle:
+                                                 *mut ::std::os::raw::c_void,
+                                             p_name:
+                                                 *const ::std::os::raw::c_char,
+                                             p_base:
+                                                 *const ::std::os::raw::c_char,
+                                             p_create_func:
+                                                 godot_instance_create_func,
+                                             p_destroy_func:
+                                                 godot_instance_destroy_func);
 }
 extern "C" {
-    pub fn godot_script_register_tool_class(p_name:
-                                                *const ::std::os::raw::c_char,
-                                            p_base:
-                                                *const ::std::os::raw::c_char,
-                                            p_create_func:
-                                                godot_instance_create_func,
-                                            p_destroy_func:
-                                                godot_instance_destroy_func);
+    pub fn godot_nativescript_register_tool_class(p_gdnative_handle:
+                                                      *mut ::std::os::raw::c_void,
+                                                  p_name:
+                                                      *const ::std::os::raw::c_char,
+                                                  p_base:
+                                                      *const ::std::os::raw::c_char,
+                                                  p_create_func:
+                                                      godot_instance_create_func,
+                                                  p_destroy_func:
+                                                      godot_instance_destroy_func);
+}
+#[repr(C)]
+#[derive(Debug, Copy)]
+pub struct godot_method_attributes {
+    pub rpc_type: godot_method_rpc_mode,
+}
+#[test]
+fn bindgen_test_layout_godot_method_attributes() {
+    assert_eq!(::std::mem::size_of::<godot_method_attributes>() , 4usize ,
+               concat ! (
+               "Size of: " , stringify ! ( godot_method_attributes ) ));
+    assert_eq! (::std::mem::align_of::<godot_method_attributes>() , 4usize ,
+                concat ! (
+                "Alignment of " , stringify ! ( godot_method_attributes ) ));
+    assert_eq! (unsafe {
+                & ( * ( 0 as * const godot_method_attributes ) ) . rpc_type as
+                * const _ as usize } , 0usize , concat ! (
+                "Alignment of field: " , stringify ! ( godot_method_attributes
+                ) , "::" , stringify ! ( rpc_type ) ));
+}
+impl Clone for godot_method_attributes {
+    fn clone(&self) -> Self { *self }
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3357,11 +3912,15 @@ impl Clone for godot_instance_method {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_script_register_method(p_name: *const ::std::os::raw::c_char,
-                                        p_function_name:
-                                            *const ::std::os::raw::c_char,
-                                        p_attr: godot_method_attributes,
-                                        p_method: godot_instance_method);
+    pub fn godot_nativescript_register_method(p_gdnative_handle:
+                                                  *mut ::std::os::raw::c_void,
+                                              p_name:
+                                                  *const ::std::os::raw::c_char,
+                                              p_function_name:
+                                                  *const ::std::os::raw::c_char,
+                                              p_attr: godot_method_attributes,
+                                              p_method:
+                                                  godot_instance_method);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3373,7 +3932,7 @@ pub struct godot_property_set_func {
                                                              arg3:
                                                                  *mut ::std::os::raw::c_void,
                                                              arg4:
-                                                                 godot_variant)>,
+                                                                 *mut godot_variant)>,
     pub method_data: *mut ::std::os::raw::c_void,
     pub free_func: ::std::option::Option<unsafe extern "C" fn(arg1:
                                                                   *mut ::std::os::raw::c_void)>,
@@ -3447,15 +4006,18 @@ impl Clone for godot_property_get_func {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_script_register_property(p_name:
-                                              *const ::std::os::raw::c_char,
-                                          p_path:
-                                              *const ::std::os::raw::c_char,
-                                          p_attr:
-                                              *mut godot_property_attributes,
-                                          p_set_func: godot_property_set_func,
-                                          p_get_func:
-                                              godot_property_get_func);
+    pub fn godot_nativescript_register_property(p_gdnative_handle:
+                                                    *mut ::std::os::raw::c_void,
+                                                p_name:
+                                                    *const ::std::os::raw::c_char,
+                                                p_path:
+                                                    *const ::std::os::raw::c_char,
+                                                p_attr:
+                                                    *mut godot_property_attributes,
+                                                p_set_func:
+                                                    godot_property_set_func,
+                                                p_get_func:
+                                                    godot_property_get_func);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -3554,35 +4116,15 @@ impl Clone for godot_signal {
     fn clone(&self) -> Self { *self }
 }
 extern "C" {
-    pub fn godot_script_register_signal(p_name: *const ::std::os::raw::c_char,
-                                        p_signal: *const godot_signal);
+    pub fn godot_nativescript_register_signal(p_gdnative_handle:
+                                                  *mut ::std::os::raw::c_void,
+                                              p_name:
+                                                  *const ::std::os::raw::c_char,
+                                              p_signal: *const godot_signal);
 }
 extern "C" {
-    pub fn godot_native_get_userdata(p_instance: *mut godot_object)
+    pub fn godot_nativescript_get_userdata(p_instance: *mut godot_object)
      -> *mut ::std::os::raw::c_void;
-}
-pub type godot_class_constructor =
-    ::std::option::Option<unsafe extern "C" fn() -> *mut godot_object>;
-extern "C" {
-    pub fn godot_get_class_constructor(p_classname:
-                                           *const ::std::os::raw::c_char)
-     -> godot_class_constructor;
-}
-extern "C" {
-    pub fn godot_get_global_constants() -> godot_dictionary;
-}
-extern "C" {
-    ////// System Functions
-    pub fn godot_alloc(p_bytes: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_void;
-}
-extern "C" {
-    pub fn godot_realloc(p_ptr: *mut ::std::os::raw::c_void,
-                         p_bytes: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_void;
-}
-extern "C" {
-    pub fn godot_free(p_ptr: *mut ::std::os::raw::c_void);
 }
 #[repr(C)]
 #[derive(Debug, Copy)]

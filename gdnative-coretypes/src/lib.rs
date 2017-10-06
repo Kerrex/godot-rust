@@ -1,4 +1,5 @@
 extern crate gdnative_sys;
+
 pub mod array;
 pub mod variant;
 pub mod pool_arrays;
@@ -9,6 +10,7 @@ mod godot {
 
     use std::mem;
     use array::GDArray;
+
     /// Taken from godot cpp_bindings, original spelling
     enum Error {
         Ok,
@@ -108,17 +110,10 @@ mod godot {
 
 
 
-
-
-
-
-
     // Temporary, delete after generating bindings based on *.json file
     #[derive(Copy, Clone)]
     pub struct GDObject {}
 
     #[derive(Copy, Clone)]
-    pub struct GDString{}
-
-
+    pub struct GDString {}
 }

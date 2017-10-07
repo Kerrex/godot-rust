@@ -1,16 +1,18 @@
 extern crate gdnative_sys;
+extern crate cgmath;
 
 pub mod array;
 pub mod variant;
 pub mod pool_arrays;
 pub mod string;
+pub mod node_path;
+pub mod basis;
 
 mod godot {
     use gdnative_sys::*;
-
+    use cgmath::{Vector2, Vector3};
     use std::mem;
     use array::GDArray;
-
     /// Taken from godot cpp_bindings, original spelling
     enum Error {
         Ok,
@@ -116,4 +118,7 @@ mod godot {
 
     #[derive(Copy, Clone)]
     pub struct GDString {}
+
+    pub type GDVector3 = Vector3<f32>;
+    pub type GDVector2 = Vector2<f32>;
 }

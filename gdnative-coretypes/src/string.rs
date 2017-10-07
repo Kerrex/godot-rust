@@ -4,9 +4,11 @@ use std::mem;
 use std::ops::{Index, IndexMut, Add, AddAssign};
 use std::ptr;
 use std::ffi::CString;
+use std::cmp::Ordering;
+use node_path::*;
 
 #[derive(Clone)]
-struct GDString {
+pub struct GDString {
     pub ( crate ) _string: godot_string
 }
 
@@ -118,6 +120,42 @@ impl PartialEq for GDString {
     }
 }
 
+impl Eq for GDString {}
+
+impl PartialOrd for GDString {
+    fn partial_cmp(&self, other: &GDString) -> Option<Ordering> {
+        let is_less = self < other;
+        if is_less {
+            return Some(Ordering::Less);
+        }
+        let is_greater = self > other;
+        if is_greater {
+            return Some(Ordering::Greater);
+        }
+        Some(Ordering::Equal)
+    }
+
+    fn lt(&self, other: &GDString) -> bool {
+        unsafe {
+            let this_gd_string = self._string;
+            let other_gd_string = other._string;
+            godot_string_operator_less(&this_gd_string, &other_gd_string)
+        }
+    }
+
+    fn le(&self, other: &GDString) -> bool {
+        self < other || self == other
+    }
+
+    fn gt(&self, other: &GDString) -> bool {
+        !(self <= other)
+    }
+
+    fn ge(&self, other: &GDString) -> bool {
+        !(self < other)
+    }
+}
+
 impl Add for GDString {
     type Output = GDString;
 
@@ -135,5 +173,12 @@ impl AddAssign for GDString {
         }
     }
 }
+
+impl From<godot_string> for GDString {
+    fn from(string: godot_string) -> Self {
+        GDString { _string: string }
+    }
+}
+
 
 //TODO Finish String

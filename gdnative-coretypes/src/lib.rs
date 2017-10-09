@@ -7,6 +7,8 @@ pub mod pool_arrays;
 pub mod string;
 pub mod node_path;
 pub mod basis;
+pub mod vector2;
+pub mod vector3;
 
 mod godot {
     use gdnative_sys::*;
@@ -116,9 +118,5 @@ mod godot {
     #[derive(Copy, Clone)]
     pub struct GDObject {}
 
-    #[derive(Copy, Clone)]
-    pub struct GDString {}
-
     pub type GDVector3 = Vector3<f32>;
-    pub type GDVector2 = Vector2<f32>;
 }

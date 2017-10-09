@@ -3,6 +3,7 @@ use gdnative_sys::*;
 use std::mem;
 
 #[derive(Copy, Clone)]
+#[repr(C)]
 pub struct GDVariant {
     pub ( crate ) _variant: godot_variant
 }

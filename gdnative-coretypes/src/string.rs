@@ -1,19 +1,22 @@
 use gdnative_sys::*;
 use godot::*;
 use std::mem;
-use std::ops::{Index, IndexMut, Add, AddAssign};
+use std::ops::{Add, AddAssign, Index, IndexMut};
 use std::ptr;
 use std::ffi::CString;
 use std::cmp::Ordering;
 use node_path::*;
 
 #[derive(Clone)]
+#[repr(C)]
 pub struct GDString {
-    pub ( crate ) _string: godot_string
+    pub(crate) _string: godot_string,
 }
 
 fn new_gd_string() -> godot_string {
-    godot_string { _dont_touch_that: [0; 8usize] }
+    godot_string {
+        _dont_touch_that: [0; 8usize],
+    }
 }
 
 impl GDString {
@@ -21,7 +24,9 @@ impl GDString {
         unsafe {
             let mut new_string = new_gd_string();
             godot_string_new(&mut new_string);
-            GDString { _string: new_string }
+            GDString {
+                _string: new_string,
+            }
         }
     }
 
@@ -30,7 +35,9 @@ impl GDString {
             let mut new_string = new_gd_string();
             let pointer = chars.as_ptr() as *const i8;
             godot_string_new_data(&mut new_string, pointer, chars.len() as i32);
-            GDString { _string: new_string }
+            GDString {
+                _string: new_string,
+            }
         }
     }
 
@@ -39,7 +46,9 @@ impl GDString {
             let mut new_string = new_gd_string();
             let chars = variable.as_ptr() as *const i8;
             godot_string_new_data(&mut new_string, chars, variable.len() as i32);
-            GDString { _string: new_string }
+            GDString {
+                _string: new_string,
+            }
         }
     }
 
@@ -48,7 +57,9 @@ impl GDString {
             let mut new_string = new_gd_string();
             let existing_string = variable._string;
             godot_string_new_copy(&mut new_string, &existing_string);
-            GDString { _string: new_string }
+            GDString {
+                _string: new_string,
+            }
         }
     }
 
@@ -63,9 +74,7 @@ impl GDString {
 
 impl Drop for GDString {
     fn drop(&mut self) {
-        unsafe {
-            godot_string_destroy(&mut self._string)
-        }
+        unsafe { godot_string_destroy(&mut self._string) }
     }
 }
 
@@ -97,8 +106,7 @@ impl IndexMut<i32> for GDString {
 impl ToString for GDString {
     fn to_string(&self) -> String {
         unsafe {
-            let mut this_string = self._string;
-            let str_in_u8 = godot_string_c_str(&mut this_string);
+            let str_in_u8 = godot_string_c_str(&self._string);
             let mut str_mutable = str_in_u8 as *mut i8;
             let result = CString::from_raw(str_mutable).into_string().unwrap();
             result
@@ -156,12 +164,20 @@ impl PartialOrd for GDString {
     }
 }
 
+impl Ord for GDString {
+    fn cmp(&self, other: &GDString) -> Ordering {
+        self.partial_cmp(other).unwrap()
+    }
+}
+
 impl Add for GDString {
     type Output = GDString;
 
     fn add(self, string_to_add: GDString) -> Self::Output {
         unsafe {
-            GDString { _string: godot_string_operator_plus(&self._string, &string_to_add._string) }
+            GDString {
+                _string: godot_string_operator_plus(&self._string, &string_to_add._string),
+            }
         }
     }
 }

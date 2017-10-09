@@ -1,6 +1,7 @@
 use gdnative_sys::*;
 use godot::*;
 
-pub struct Basis {
-    elements: GDVector3,
+#[repr(C)]
+pub struct GDBasis {
+    pub ( crate ) _basis: godot_basis,
 }

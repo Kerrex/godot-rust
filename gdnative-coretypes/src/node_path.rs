@@ -4,6 +4,7 @@ use string::GDString;
 use std::mem::transmute;
 
 #[derive(Clone)]
+#[repr(C)]
 pub struct GDNodePath {
     _node_path: godot_node_path,
 }

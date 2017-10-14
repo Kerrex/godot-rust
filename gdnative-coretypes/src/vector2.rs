@@ -6,7 +6,7 @@ use std::cmp::{PartialEq, Eq, Ordering};
 
 #[repr(C)]
 pub struct GDVector2 {
-    _vector: godot_vector2
+    pub (crate) _vector: godot_vector2
 }
 
 fn new_vector2() -> godot_vector2 {

@@ -9,14 +9,18 @@ pub mod node_path;
 pub mod basis;
 pub mod vector2;
 pub mod vector3;
+pub mod color;
 
 mod godot {
     use gdnative_sys::*;
     use cgmath::{Vector2, Vector3};
     use std::mem;
     use array::GDArray;
+
+
+
     /// Taken from godot cpp_bindings, original spelling
-    enum Error {
+    /* enum Error {
         Ok,
         Failed,
         ///< Generic fail error
@@ -90,7 +94,7 @@ mod godot {
         ErrPrinterOnFire,
         /// the parallel port printer is engulfed in flames
         ErrOmfgThisIsVeryVeryBad //< shit happens, has never been used, though
-    }
+    } */
 
     macro_rules! cmp_epsilon {
         () => {0.00001};
@@ -118,4 +122,5 @@ mod godot {
     #[derive(Copy, Clone)]
     pub struct GDObject {}
 
+    pub type GDError = godot_error;
 }

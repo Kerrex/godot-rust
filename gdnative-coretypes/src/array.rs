@@ -3,18 +3,11 @@ use std::ops::{Index, IndexMut};
 use godot::*;
 use variant::GDVariant;
 use pool_arrays::*;
-use std::mem::transmute;
+use std::mem;
 use string::GDString;
 
-#[repr(C)]
 pub struct GDArray {
-    _array: godot_array,
-}
-
-fn new_array() -> godot_array {
-    godot_array {
-        _dont_touch_that: [0; 8usize],
-    }
+    pub (crate) _array: godot_array,
 }
 
 impl GDArray {
@@ -28,9 +21,57 @@ impl GDArray {
         GDArray { _array: array }
     }
 
+    pub fn from_pool_byte_array(pool_array: &GDPoolByteArray) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_byte_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
+    pub fn from_pool_int_array(pool_array: &GDPoolIntArray) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_int_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
+    pub fn from_pool_real_array(pool_array: &GDPoolRealArray) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_real_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
+    pub fn from_pool_string_array(pool_array: &GDPoolStringArray) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_string_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
+    pub fn from_pool_vector2_array(pool_array: &GDPoolVector2Array) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_vector2_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
+    pub fn from_pool_vector3_array(pool_array: &GDPoolVector3Array) -> GDArray {
+        let mut array = godot_array {
+            _dont_touch_that: [0; 8usize],
+        };
+        unsafe { godot_array_new_pool_vector3_array(&mut array, &pool_array._array) }
+        GDArray { _array: array }
+    }
+
     pub fn append(&mut self, variant: &GDVariant) {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(variant);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(variant);
             godot_array_append(&mut self._array, gd_variant);
         }
     }
@@ -41,7 +82,7 @@ impl GDArray {
 
     pub fn count(&mut self, variant: &GDVariant) -> i32 {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(variant);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(variant);
             godot_array_count(&mut self._array, gd_variant)
         }
     }
@@ -52,7 +93,7 @@ impl GDArray {
 
     pub fn erase(&mut self, variant: &GDVariant) {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(variant);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(variant);
             godot_array_erase(&mut self._array, gd_variant)
         }
     }
@@ -60,7 +101,7 @@ impl GDArray {
     pub fn front(&mut self) -> GDVariant {
         unsafe {
             let gd_variant = godot_array_front(&mut self._array);
-            let variant = (transmute::<&godot_variant, &GDVariant>(&gd_variant));
+            let variant = (mem::transmute::<&godot_variant, &GDVariant>(&gd_variant));
             *variant
         }
     }
@@ -68,28 +109,28 @@ impl GDArray {
     pub fn back(&mut self) -> GDVariant {
         unsafe {
             let gd_variant = godot_array_back(&mut self._array);
-            let variant = (transmute::<&godot_variant, &GDVariant>(&gd_variant));
+            let variant = (mem::transmute::<&godot_variant, &GDVariant>(&gd_variant));
             *variant
         }
     }
 
     pub fn find(&mut self, what: &GDVariant, from: i32) -> i32 {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(&what);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(&what);
             godot_array_find(&mut self._array, gd_variant, from)
         }
     }
 
     pub fn find_last(&mut self, what: &GDVariant) -> i32 {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(&what);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(&what);
             godot_array_find_last(&mut self._array, gd_variant)
         }
     }
 
     pub fn has(&mut self, what: &GDVariant) -> bool {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(&what);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(&what);
             godot_array_has(&mut self._array, gd_variant)
         }
     }
@@ -100,7 +141,7 @@ impl GDArray {
 
     pub fn insert(&mut self, position: i32, value: &GDVariant) {
         unsafe {
-            let gd_variant = transmute::<&GDVariant, &godot_variant>(&value);
+            let gd_variant = mem::transmute::<&GDVariant, &godot_variant>(&value);
             godot_array_insert(&mut self._array, position, gd_variant)
         }
     }
@@ -112,7 +153,7 @@ impl GDArray {
     pub fn pop_back(&mut self) -> GDVariant {
         unsafe {
             let gd_variant = godot_array_pop_back(&mut self._array);
-            let variant = transmute::<&godot_variant, &GDVariant>(&gd_variant);
+            let variant = mem::transmute::<&godot_variant, &GDVariant>(&gd_variant);
             *variant
         }
     }
@@ -120,7 +161,7 @@ impl GDArray {
     pub fn pop_front(&mut self) -> GDVariant {
         unsafe {
             let gd_variant = godot_array_pop_front(&mut self._array);
-            let variant = transmute::<&godot_variant, &GDVariant>(&gd_variant);
+            let variant = mem::transmute::<&godot_variant, &GDVariant>(&gd_variant);
             *variant
         }
     }
@@ -164,8 +205,8 @@ impl GDArray {
 
     fn sort_custom(&mut self, object: &mut GDObject, function: &GDString) {
         unsafe {
-            let gd_object = transmute::<&mut GDObject, &mut godot_object>(object);
-            let gd_string = transmute::<&GDString, &godot_string>(function);
+            let gd_object = mem::transmute::<&mut GDObject, &mut godot_object>(object);
+            let gd_string = mem::transmute::<&GDString, &godot_string>(function);
             godot_array_sort_custom(&mut self._array, gd_object, gd_string)
         }
     }
@@ -184,7 +225,7 @@ impl Index<i32> for GDArray {
         let mut array = self._array;
         unsafe {
             let mut v = godot_array_operator_index(&mut array, index);
-            transmute::<*mut godot_variant, &GDVariant>(v)
+            mem::transmute::<*mut godot_variant, &GDVariant>(v)
         }
     }
 }
@@ -194,60 +235,8 @@ impl IndexMut<i32> for GDArray {
         let mut array = self._array;
         unsafe {
             let mut v = godot_array_operator_index(&mut array, index);
-            transmute::<*mut godot_variant, &mut GDVariant>(v)
+            mem::transmute::<*mut godot_variant, &mut GDVariant>(v)
         }
     }
 }
 
-impl From<GDPoolByteArray> for GDArray {
-    fn from(pool_array: GDPoolByteArray) -> Self {
-        unsafe {
-            let mut new_godot_array = new_array();
-            let godot_pool_byte_array = transmute::<&GDPoolByteArray, &godot_pool_byte_array>(&pool_array);
-            godot_array_new_pool_byte_array(&mut new_godot_array, godot_pool_byte_array);
-            GDArray { _array: new_godot_array }
-        }
-    }
-}
-
-impl From<GDPoolIntArray> for GDArray {
-    fn from(pool_array: GDPoolIntArray) -> Self {
-        let mut array = new_array();
-        unsafe { godot_array_new_pool_int_array(&mut array, &pool_array._array) }
-        GDArray { _array: array }
-    }
-}
-
-impl From<GDPoolRealArray> for GDArray {
-    fn from(pool_array: GDPoolRealArray) -> Self {
-        let mut array = new_array();
-        unsafe { godot_array_new_pool_real_array(&mut array, &pool_array._array) }
-        GDArray { _array: array }
-    }
-}
-
-impl From<GDPoolStringArray> for GDArray {
-    fn from(pool_array: GDPoolStringArray) -> Self {
-        let mut array = new_array();
-        unsafe { godot_array_new_pool_string_array(&mut array, &pool_array._array) }
-        GDArray { _array: array }
-    }
-}
-
-impl From<GDPoolVector2Array> for GDArray {
-    fn from(pool_array: GDPoolVector2Array) -> Self {
-        let mut array = new_array();
-        unsafe { godot_array_new_pool_vector2_array(&mut array, &pool_array._array) }
-        GDArray { _array: array }
-    }
-}
-
-impl From<GDPoolVector3Array> for GDArray {
-    fn from(pool_array: GDPoolVector3Array) -> Self {
-        let mut array = new_array();
-        unsafe { godot_array_new_pool_vector3_array(&mut array, &pool_array._array) }
-        GDArray { _array: array }
-    }
-}
-
-//TODO From<Color> for GDArray

@@ -7,6 +7,7 @@ use std::ffi::CString;
 use std::cmp::Ordering;
 use node_path::*;
 use basis::GDBasis;
+use color::GDColor;
 
 #[derive(Clone)]
 #[repr(C)]
@@ -205,6 +206,15 @@ impl<'a> From<&'a GDBasis> for GDString {
         }
     }
 }
+
+impl From<GDColor> for GDString {
+    fn from(color: GDColor) -> Self {
+        unsafe {
+            let gd_string = godot_color_as_string(&color._color);
+            GDString { _string: gd_string }
+        }
+    }
+} 
 
 
 //TODO Finish String

@@ -6,6 +6,7 @@ use std::ptr;
 use std::ffi::CString;
 use std::cmp::Ordering;
 use node_path::*;
+use basis::GDBasis;
 
 #[derive(Clone)]
 #[repr(C)]
@@ -193,6 +194,15 @@ impl AddAssign for GDString {
 impl From<godot_string> for GDString {
     fn from(string: godot_string) -> Self {
         GDString { _string: string }
+    }
+}
+
+impl<'a> From<&'a GDBasis> for GDString {
+    fn from(basis: &GDBasis) -> Self {
+        unsafe {
+            let gd_string = godot_basis_as_string(&basis._basis);
+            GDString { _string: gd_string }
+        }
     }
 }
 

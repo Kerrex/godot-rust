@@ -7,7 +7,7 @@ use basis::GDBasis;
 
 #[repr(C)]
 pub struct GDVector3 {
-    _vector: godot_vector3
+    pub (crate) _vector: godot_vector3
 }
 
 #[repr(C)]

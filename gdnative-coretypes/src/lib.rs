@@ -118,5 +118,4 @@ mod godot {
     #[derive(Copy, Clone)]
     pub struct GDObject {}
 
-    pub type GDVector3 = Vector3<f32>;
 }

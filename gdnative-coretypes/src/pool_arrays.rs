@@ -4,6 +4,7 @@ use godot::GDError;
 use string::GDString;
 use vector2::GDVector2;
 use vector3::GDVector3;
+use color::GDColor;
 
 #[repr(C)]
 #[derive(Clone)]
@@ -684,6 +685,113 @@ impl From<GDArray> for GDPoolVector3Array {
             let mut new_array = new_vector3_array();
             godot_pool_vector3_array_new_with_array(&mut new_array, &array._array);
             GDPoolVector3Array { _array: new_array }
+        }
+    }
+}
+
+//color array 
+fn new_color_array() -> godot_pool_color_array {
+    godot_pool_color_array { _dont_touch_that: [0; 8usize] }
+}
+
+impl GDPoolColorArray {
+    pub fn new() -> GDPoolColorArray {
+        unsafe {
+            let mut new_array = new_color_array();
+            godot_pool_color_array_new(&mut new_array);
+            GDPoolColorArray { _array: new_array }
+        }
+    }
+
+    pub fn new_copy(color_array: &GDPoolColorArray) -> GDPoolColorArray {
+        unsafe {
+            let mut new_array = new_color_array();
+            godot_pool_color_array_new_copy(&mut new_array, &color_array._array);
+            GDPoolColorArray { _array: new_array }
+        }
+    }
+
+    pub fn insert(&mut self, index: i32, data: &GDColor) -> GDError {
+        unsafe {
+            godot_pool_color_array_insert(&mut self._array, index, &data._color)
+        }
+    }
+
+    pub fn inverted(&self) -> GDPoolColorArray {
+        unsafe {
+            let mut cloned = self._array.clone();
+            godot_pool_color_array_invert(&mut cloned);
+            GDPoolColorArray { _array: cloned }
+        }
+    }
+
+    pub fn push_back(&mut self, data: &GDColor) {
+        unsafe {
+            godot_pool_color_array_push_back(&mut self._array, &data._color)
+        }
+    }
+
+    pub fn remove(&mut self, index: i32) {
+        unsafe {
+            godot_pool_color_array_remove(&mut self._array, index)
+        }
+    }
+
+    pub fn resize(&mut self, new_size: i32) {
+        unsafe {
+            godot_pool_color_array_resize(&mut self._array, new_size)
+        }
+    }
+
+    pub fn set(&mut self, index: i32, data: &GDColor) {
+        unsafe {
+            godot_pool_color_array_set(&mut self._array, index, &data._color)
+        }
+    }
+
+    pub fn get(&self, index: i32) -> GDColor {
+        unsafe {
+            let color = godot_pool_color_array_get(&self._array, index);
+            GDColor { _color: color }
+        }
+    }
+    
+    pub fn size(&self) -> i32 {
+        unsafe {
+            godot_pool_color_array_size(&self._array)
+        }
+    }
+
+}
+
+impl Drop for GDPoolColorArray {
+    fn drop(&mut self) {
+        unsafe { godot_pool_color_array_destroy(&mut self._array) }
+    }
+}
+
+impl Appendable<GDColor> for GDPoolColorArray {
+    fn append(&mut self, data: GDColor) {
+        unsafe {
+            godot_pool_color_array_append(&mut self._array, &data._color);
+        }
+    }
+}
+
+impl Appendable<GDPoolColorArray> for GDPoolColorArray {
+    fn append(&mut self, array: GDPoolColorArray) {
+        unsafe {
+            godot_pool_color_array_append_array(&mut self._array, &array._array);
+        }
+    }
+}
+
+impl From<GDArray> for GDPoolColorArray {
+    fn from(array: GDArray) -> GDPoolColorArray {
+        unsafe {
+            let mut new_array = new_color_array();
+            godot_pool_color_array_new_with_array(&mut new_array, &array._array);
+            GDPoolColorArray { _array: new_array }
         }
     }
 }

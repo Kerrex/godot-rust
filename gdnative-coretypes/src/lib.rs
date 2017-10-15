@@ -10,12 +10,10 @@ pub mod basis;
 pub mod vector2;
 pub mod vector3;
 pub mod color;
+pub mod dictionary;
 
 mod godot {
     use gdnative_sys::*;
-    use cgmath::{Vector2, Vector3};
-    use std::mem;
-    use array::GDArray;
 
 
 

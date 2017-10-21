@@ -1,7 +1,8 @@
 use gdnative_sys::*;
 use vector3::GDVector3;
 use std::mem::transmute;
-use std::ops::{Add, AddAssign, Index, IndexMut, Sub, SubAssign, Mul, MulAssign, Div, DivAssign, Neg};
+use std::ops::{Add, AddAssign, Index, IndexMut, Sub, SubAssign, Mul, MulAssign, Div, DivAssign,
+               Neg};
 use std::cmp::{PartialEq, Eq, Ordering};
 
 #[repr(C)]
@@ -214,9 +215,7 @@ impl DivAssign<f32> for GDQuat {
 
 impl PartialEq for GDQuat {
     fn eq(&self, other: &GDQuat) -> bool {
-        unsafe {
-            godot_quat_operator_equal(&self._quat, &other._quat)
-        }
+        unsafe { godot_quat_operator_equal(&self._quat, &other._quat) }
     }
 
     fn ne(&self, other: &GDQuat) -> bool {

@@ -8,6 +8,7 @@ use std::cmp::Ordering;
 use node_path::*;
 use basis::GDBasis;
 use color::GDColor;
+use quat::GDQuat;
 
 #[derive(Clone)]
 #[repr(C)]
@@ -16,9 +17,7 @@ pub struct GDString {
 }
 
 fn new_gd_string() -> godot_string {
-    godot_string {
-        _dont_touch_that: [0; 8usize],
-    }
+    godot_string { _dont_touch_that: [0; 8usize] }
 }
 
 impl GDString {
@@ -26,9 +25,7 @@ impl GDString {
         unsafe {
             let mut new_string = new_gd_string();
             godot_string_new(&mut new_string);
-            GDString {
-                _string: new_string,
-            }
+            GDString { _string: new_string }
         }
     }
 
@@ -37,9 +34,7 @@ impl GDString {
             let mut new_string = new_gd_string();
             let pointer = chars.as_ptr() as *const i8;
             godot_string_new_data(&mut new_string, pointer, chars.len() as i32);
-            GDString {
-                _string: new_string,
-            }
+            GDString { _string: new_string }
         }
     }
 
@@ -48,9 +43,7 @@ impl GDString {
             let mut new_string = new_gd_string();
             let chars = variable.as_ptr() as *const i8;
             godot_string_new_data(&mut new_string, chars, variable.len() as i32);
-            GDString {
-                _string: new_string,
-            }
+            GDString { _string: new_string }
         }
     }
 
@@ -59,9 +52,7 @@ impl GDString {
             let mut new_string = new_gd_string();
             let existing_string = variable._string;
             godot_string_new_copy(&mut new_string, &existing_string);
-            GDString {
-                _string: new_string,
-            }
+            GDString { _string: new_string }
         }
     }
 
@@ -177,9 +168,7 @@ impl Add for GDString {
 
     fn add(self, string_to_add: GDString) -> Self::Output {
         unsafe {
-            GDString {
-                _string: godot_string_operator_plus(&self._string, &string_to_add._string),
-            }
+            GDString { _string: godot_string_operator_plus(&self._string, &string_to_add._string) }
         }
     }
 }
@@ -214,7 +203,16 @@ impl From<GDColor> for GDString {
             GDString { _string: gd_string }
         }
     }
-} 
+}
+
+impl From<GDQuat> for GDString {
+    fn from(quat: GDQuat) -> Self {
+        unsafe {
+            let gd_string = godot_quat_as_string(&quat._quat);
+            GDString { _string: gd_string }
+        }
+    }
+}
 
 
 //TODO Finish String

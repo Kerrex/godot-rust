@@ -11,6 +11,7 @@ pub mod vector2;
 pub mod vector3;
 pub mod color;
 pub mod dictionary;
+pub mod quat;
 
 mod godot {
     use gdnative_sys::*;

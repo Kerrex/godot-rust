@@ -5,6 +5,7 @@ use std::iter::Map;
 use std::slice::*;
 use std::iter::*;
 use string::GDString;
+use quat::GDQuat;
 use std::ops::{Add, AddAssign, Sub, SubAssign, Mul, MulAssign};
 
 #[repr(C)]
@@ -85,8 +86,13 @@ impl GDBasis {
         }
     }
 
-    //TODO: Need to create GDQuat first
-    //pub fn new_with_euler_quat(quat: &GDQuat) -> GDBasis {
+    pub fn new_with_euler_quat(quat: &GDQuat) -> GDBasis {
+        unsafe {
+            let mut new_basis = new_basis();
+            godot_basis_new_with_euler_quat(&mut new_basis, &quat._quat);
+            GDBasis { _basis: new_basis }
+        }
+    }
 
 
     pub fn inverse(&self) -> GDBasis {

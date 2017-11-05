@@ -12,6 +12,7 @@ pub mod vector3;
 pub mod color;
 pub mod dictionary;
 pub mod quat;
+pub mod plane;
 
 mod godot {
     use gdnative_sys::*;

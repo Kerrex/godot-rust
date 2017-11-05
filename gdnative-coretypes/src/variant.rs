@@ -106,6 +106,5 @@ impl GDVariant {
             GDVariant { _variant: new_variant }
         }
     }
-
-    // TODO FROM OTHER TYPES
+    // TODO probably switch to rust From
 }

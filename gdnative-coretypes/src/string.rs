@@ -9,6 +9,7 @@ use node_path::*;
 use basis::GDBasis;
 use color::GDColor;
 use quat::GDQuat;
+use plane::GDPlane;
 
 #[derive(Clone)]
 #[repr(C)]
@@ -209,6 +210,15 @@ impl From<GDQuat> for GDString {
     fn from(quat: GDQuat) -> Self {
         unsafe {
             let gd_string = godot_quat_as_string(&quat._quat);
+            GDString { _string: gd_string }
+        }
+    }
+}
+
+impl From<GDPlane> for GDString {
+    fn from(plane: GDPlane) -> Self {
+        unsafe {
+            let gd_string = godot_plane_as_string(&plane._plane);
             GDString { _string: gd_string }
         }
     }

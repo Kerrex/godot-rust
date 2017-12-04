@@ -1,12 +1,6 @@
 use godot::*;
 use gdnative_sys::*;
-use vector3::GDVector3;
 use std::ops::Neg;
-
-#[repr(C)]
-pub struct GDPlane {
-    pub(crate) _plane: godot_plane,
-}
 
 fn new_plane() -> godot_plane {
     godot_plane {

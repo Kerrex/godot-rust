@@ -1,16 +1,9 @@
 use gdnative_sys::*;
-use vector3::GDVector3;
-use vector2::GDVector2;
+use godot::*;
 use std::mem::transmute;
 use std::ops::{Add, AddAssign, Div, DivAssign, Index, IndexMut, Mul, MulAssign, Neg, Sub,
                SubAssign};
 use std::cmp::{Eq, Ordering, PartialEq};
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct GDRect2 {
-    pub(crate) _rect: godot_rect2,
-}
 
 fn new_rect2() -> godot_rect2 {
     godot_rect2 {

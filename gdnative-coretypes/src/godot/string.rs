@@ -5,20 +5,6 @@ use std::ops::{Add, AddAssign, Index, IndexMut};
 use std::ptr;
 use std::ffi::CString;
 use std::cmp::Ordering;
-use node_path::*;
-use basis::GDBasis;
-use color::GDColor;
-use quat::GDQuat;
-use plane::GDPlane;
-use rect2::GDRect2;
-use rect3::GDRect3;
-use transform2d::GDTransform2D;
-
-#[derive(Clone)]
-#[repr(C)]
-pub struct GDString {
-    pub(crate) _string: godot_string,
-}
 
 fn new_gd_string() -> godot_string {
     godot_string {
@@ -266,4 +252,12 @@ impl From<GDTransform2D> for GDString {
     }
 }
 
+impl From<GDTransform> for GDString {
+    fn from(transform: GDTransform) -> Self {
+        unsafe {
+            let gd_string = godot_transform_as_string(&transform._transform);
+            GDString { _string: gd_string }
+        }
+    }
+}
 //TODO Finish String

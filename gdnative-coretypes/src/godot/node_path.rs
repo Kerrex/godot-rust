@@ -1,13 +1,6 @@
 use gdnative_sys::*;
 use godot::*;
-use string::GDString;
 use std::mem::transmute;
-
-#[derive(Clone)]
-#[repr(C)]
-pub struct GDNodePath {
-    _node_path: godot_node_path,
-}
 
 fn new_node_path() -> godot_node_path {
     godot_node_path {_dont_touch_that: [0; 8usize]}

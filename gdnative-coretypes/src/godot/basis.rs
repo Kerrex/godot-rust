@@ -1,17 +1,9 @@
 use gdnative_sys::*;
 use godot::*;
-use vector3::GDVector3;
 use std::iter::Map;
 use std::slice::*;
 use std::iter::*;
-use string::GDString;
-use quat::GDQuat;
 use std::ops::{Add, AddAssign, Sub, SubAssign, Mul, MulAssign};
-
-#[repr(C)]
-pub struct GDBasis {
-    pub ( crate ) _basis: godot_basis,
-}
 
 fn new_basis() -> godot_basis {
     godot_basis { _dont_touch_that: [0; 36usize] }

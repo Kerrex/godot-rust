@@ -1,15 +1,9 @@
 use gdnative_sys::*;
-use vector3::GDVector3;
+use godot::*;
 use std::mem::transmute;
 use std::ops::{Add, AddAssign, Index, IndexMut, Sub, SubAssign, Mul, MulAssign, Div, DivAssign,
                Neg};
 use std::cmp::{PartialEq, Eq, Ordering};
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct GDQuat {
-    pub(crate) _quat: godot_quat,
-}
 
 fn new_quat() -> godot_quat {
     godot_quat { _dont_touch_that: [0; 16usize] }

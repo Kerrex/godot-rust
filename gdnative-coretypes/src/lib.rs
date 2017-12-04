@@ -1,23 +1,7 @@
 extern crate gdnative_sys;
-extern crate cgmath;
+pub mod godot;
 
-pub mod array;
-pub mod variant;
-pub mod pool_arrays;
-pub mod string;
-pub mod node_path;
-pub mod basis;
-pub mod vector2;
-pub mod vector3;
-pub mod color;
-pub mod dictionary;
-pub mod quat;
-pub mod plane;
-pub mod rect2;
-pub mod rect3;
-pub mod transform2d;
-
-mod godot {
+/* pub mod godot {
     use gdnative_sys::*;
 
 
@@ -122,8 +106,10 @@ mod godot {
 
 
     // Temporary, delete after generating bindings based on *.json file
-    #[derive(Copy, Clone)]
-    pub struct GDObject {}
 
-    pub type GDError = godot_error;
-}
+    pub struct GDObject {
+        pub(crate) _object: godot_object
+    }
+
+    
+} */

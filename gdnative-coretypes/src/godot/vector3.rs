@@ -1,14 +1,7 @@
 use gdnative_sys::*;
 use godot::*;
-use string::GDString;
 use std::ops::{Add, AddAssign, Index, IndexMut, Sub, SubAssign, Mul, MulAssign, Div, DivAssign, Neg};
 use std::cmp::{PartialEq, Eq, Ordering};
-use basis::GDBasis;
-
-#[repr(C)]
-pub struct GDVector3 {
-    pub (crate) _vector: godot_vector3
-}
 
 #[repr(C)]
 pub enum GDVector3Axis {

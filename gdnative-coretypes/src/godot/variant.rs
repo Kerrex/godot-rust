@@ -2,12 +2,6 @@ use godot::*;
 use gdnative_sys::*;
 use std::mem;
 
-#[derive(Copy, Clone)]
-#[repr(C)]
-pub struct GDVariant {
-    pub ( crate ) _variant: godot_variant
-}
-
 fn new_gd_variant() -> godot_variant {
     godot_variant { _dont_touch_that: [0; 24usize] }
 }

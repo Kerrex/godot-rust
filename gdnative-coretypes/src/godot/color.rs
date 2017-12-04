@@ -1,10 +1,6 @@
 use gdnative_sys::*;
-use string::GDString;
 use std::cmp::Ordering;
-
-pub struct GDColor {
-    pub(crate) _color: godot_color,
-}
+use godot::*;
 
 fn new_color() -> godot_color {
     godot_color {

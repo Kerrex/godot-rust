@@ -1,16 +1,9 @@
 use gdnative_sys::*;
-use vector3::GDVector3;
-use vector2::GDVector2;
+use godot::*;
 use std::mem::transmute;
 use std::ops::{Add, AddAssign, Div, DivAssign, Index, IndexMut, Mul, MulAssign, Neg, Sub,
                SubAssign};
 use std::cmp::{Eq, Ordering, PartialEq};
-use rect2::GDRect2;
-
-#[repr(C)]
-pub struct GDTransform2D {
-    pub(crate) _transform: godot_transform2d,
-}
 
 fn new_transform() -> godot_transform2d {
     godot_transform2d {

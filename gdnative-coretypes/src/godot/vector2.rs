@@ -1,13 +1,7 @@
 use gdnative_sys::*;
 use godot::*;
-use string::GDString;
 use std::ops::{Add, AddAssign, Index, IndexMut, Sub, SubAssign, Mul, MulAssign, Div, DivAssign, Neg};
 use std::cmp::{PartialEq, Eq, Ordering};
-
-#[repr(C)]
-pub struct GDVector2 {
-    pub (crate) _vector: godot_vector2
-}
 
 fn new_vector2() -> godot_vector2 {
     godot_vector2 { _dont_touch_that: [0; 8usize] }

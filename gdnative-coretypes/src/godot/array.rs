@@ -1,14 +1,7 @@
 use gdnative_sys::*;
 use std::ops::{Index, IndexMut};
 use godot::*;
-use variant::GDVariant;
-use pool_arrays::*;
 use std::mem;
-use string::GDString;
-
-pub struct GDArray {
-    pub (crate) _array: godot_array,
-}
 
 impl GDArray {
     pub fn new() -> GDArray {

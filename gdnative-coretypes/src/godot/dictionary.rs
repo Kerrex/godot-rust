@@ -1,16 +1,7 @@
 use gdnative_sys::*;
 use godot::*;
-use variant::GDVariant;
-use array::GDArray;
-use string::GDString;
 use std::ops::{Index, IndexMut};
 use std::mem::transmute;
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct GDDictionary {
-    _dictionary: godot_dictionary,
-}
 
 fn new_dictionary() -> godot_dictionary {
     godot_dictionary {

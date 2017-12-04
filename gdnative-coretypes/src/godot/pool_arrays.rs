@@ -1,46 +1,5 @@
 use gdnative_sys::*;
-use array::GDArray;
-use godot::GDError;
-use string::GDString;
-use vector2::GDVector2;
-use vector3::GDVector3;
-use color::GDColor;
-
-#[repr(C)]
-#[derive(Clone)]
-pub struct GDPoolByteArray {
-    pub(crate) _array: godot_pool_byte_array
-}
-
-#[repr(C)]
-pub struct GDPoolIntArray {
-    pub(crate) _array: godot_pool_int_array
-}
-
-#[repr(C)]
-pub struct GDPoolRealArray {
-    pub(crate) _array: godot_pool_real_array
-}
-
-#[repr(C)]
-pub struct GDPoolVector2Array {
-    pub(crate) _array: godot_pool_vector2_array
-}
-
-#[repr(C)]
-pub struct GDPoolVector3Array {
-    pub(crate) _array: godot_pool_vector3_array
-}
-
-#[repr(C)]
-pub struct GDPoolColorArray {
-    pub(crate) _array: godot_pool_color_array
-}
-
-#[repr(C)]
-pub struct GDPoolStringArray {
-    pub(crate) _array: godot_pool_string_array
-}
+use godot::*;
 
 fn new_byte_array() -> godot_pool_byte_array {
     godot_pool_byte_array {_dont_touch_that: [0; 8usize] }

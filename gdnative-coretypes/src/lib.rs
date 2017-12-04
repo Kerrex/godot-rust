@@ -15,6 +15,7 @@ pub mod quat;
 pub mod plane;
 pub mod rect2;
 pub mod rect3;
+pub mod transform2d;
 
 mod godot {
     use gdnative_sys::*;

@@ -12,6 +12,7 @@ use quat::GDQuat;
 use plane::GDPlane;
 use rect2::GDRect2;
 use rect3::GDRect3;
+use transform2d::GDTransform2D;
 
 #[derive(Clone)]
 #[repr(C)]
@@ -251,6 +252,15 @@ impl From<GDRect3> for GDString {
     fn from(rect3: GDRect3) -> Self {
         unsafe {
             let gd_string = godot_rect3_as_string(&rect3._rect);
+            GDString { _string: gd_string }
+        }
+    }
+}
+
+impl From<GDTransform2D> for GDString {
+    fn from(transform: GDTransform2D) -> Self {
+        unsafe {
+            let gd_string = godot_transform2d_as_string(&transform._transform);
             GDString { _string: gd_string }
         }
     }
